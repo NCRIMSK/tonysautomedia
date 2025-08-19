@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony's Audio Magic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Retro-Futuristic Color Palette */
+      --background: 240 20% 8%;
+      --foreground: 280 100% 90%;
+      --card: 240 15% 12%;
+      --card-foreground: 280 100% 90%;
+      --primary: 280 100% 70%;
+      --primary-foreground: 240 20% 8%;
+      --secondary: 260 100% 60%;
+      --secondary-foreground: 240 20% 8%;
+      --accent: 300 100% 70%;
+      --accent-foreground: 240 20% 8%;
+      --neon-cyan: 180 100% 50%;
+      --neon-pink: 320 100% 70%;
+      --neon-green: 120 100% 50%;
+      --border: 280 30% 25%;
+
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+      --gradient-background: linear-gradient(135deg, hsl(240 20% 8%), hsl(260 30% 12%), hsl(280 25% 10%));
+      --gradient-card: linear-gradient(145deg, hsl(240 15% 12% / 0.8), hsl(280 20% 15% / 0.6));
+      --gradient-neon: linear-gradient(90deg, hsl(var(--neon-cyan)), hsl(var(--neon-pink)));
+
+      /* Glows and Shadows */
+      --glow-primary: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+      --glow-secondary: 0 0 20px hsl(var(--secondary) / 0.5), 0 0 40px hsl(var(--secondary) / 0.3);
+      --glow-neon: 0 0 10px hsl(var(--neon-cyan) / 0.8), 0 0 20px hsl(var(--neon-cyan) / 0.6), 0 0 30px hsl(var(--neon-cyan) / 0.4);
+      --shadow-retro: 8px 8px 0px hsl(var(--primary) / 0.3);
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: var(--gradient-background);
+      color: hsl(var(--foreground));
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Animated Background - убираем анимацию float */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+      /* Убираем анимацию float */
+    }
+
+    .floating-shape:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      background: hsl(var(--primary));
+      top: 20%;
+      left: 10%;
+    }
+
+    .floating-shape:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      background: hsl(var(--secondary));
+      top: 60%;
+      right: 20%;
+    }
+
+    .floating-shape:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      background: hsl(var(--accent));
+      bottom: 30%;
+      left: 30%;
+    }
+
+    /* Убираем анимации wave, pulse и neonPulse */
+    @keyframes staticWave {
+      0%, 100% { height: 25px; }
+    }
+
+    @keyframes staticPulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    @keyframes staticNeonPulse {
+      0%, 100% { 
+        text-shadow: var(--glow-neon);
+        transform: scale(1);
+      }
+    }
+
+    header {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: var(--gradient-card);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid hsl(var(--border));
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      background: var(--gradient-neon);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      /* Убираем анимацию neonPulse */
+      text-shadow: var(--glow-neon);
+      position: relative;
+      z-index: 2;
+    }
+
+    .tagline {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 400;
+      color: hsl(var(--neon-cyan));
+      text-shadow: var(--glow-neon);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+
+    .sound-waves {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 30px;
+    }
+
+    .sound-wave {
+      width: 4px;
+      height: 25px; /* Фиксированная высота */
+      background: hsl(var(--neon-cyan));
+      /* Убираем анимацию wave */
+      border-radius: 2px;
+    }
+
+    .retro-card {
+      background: var(--gradient-card);
+      border-radius: 2rem;
+      border: 1px solid hsl(var(--border));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px hsl(240 20% 8% / 0.5);
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 60px auto;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .retro-card:hover {
+      transform: scale(1.02);
+      box-shadow: var(--glow-secondary), 0 12px 48px hsl(240 20% 8% / 0.7);
+    }
+
+    .retro-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-neon);
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    h2 {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: hsl(var(--neon-cyan));
+      text-shadow: var(--glow-neon);
+      border-left: 6px solid hsl(var(--primary));
+      padding-left: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    ul {
+      padding-left: 40px;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      line-height: 2;
+      font-family: 'Space Mono', monospace;
+    }
+
+    li {
+      margin-bottom: 20px;
+      position: relative;
+      transition: all 0.3s ease;
+      color: hsl(var(--foreground));
+    }
+
+    li::marker {
+      color: hsl(var(--accent));
+    }
+
+    li:hover {
+      color: hsl(var(--neon-cyan));
+      text-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5);
+      transform: translateX(10px);
+    }
+
+    p {
+      line-height: 2;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      margin-top: 15px;
+      font-family: 'Space Mono', monospace;
+      color: hsl(var(--foreground));
+    }
+
+    .faq {
+      margin-top: 80px;
+      border-top: 3px dashed hsl(var(--border));
+      padding-top: 60px;
+    }
+
+    .question {
+      font-family: 'Orbitron', monospace;
+      font-weight: 700;
+      margin-top: 40px;
+      color: hsl(var(--neon-pink));
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px hsl(var(--neon-pink) / 0.6);
+    }
+
+    /* Audio Demo Styles */
+    .audio-demo {
+      margin-top: 50px;
+      padding: 50px;
+      background: linear-gradient(145deg, hsl(240 15% 12% / 0.9), hsl(280 20% 15% / 0.7));
+      border-radius: 25px;
+      border: 2px solid hsl(var(--neon-cyan) / 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .audio-demo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-neon);
+    }
+
+    .demo-title {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: hsl(var(--neon-pink));
+      text-align: center;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: var(--glow-neon);
+      /* Убираем анимацию neonPulse */
+    }
+
+    .demo-subtitle {
+      text-align: center;
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 50px;
+      color: hsl(var(--neon-cyan));
+      font-family: 'Orbitron', monospace;
+    }
+
+    .audio-player-container {
+      background: linear-gradient(145deg, hsl(240 15% 8% / 0.8), hsl(280 20% 12% / 0.6));
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(15px);
+      border: 1px solid hsl(var(--border));
+      box-shadow: 0 8px 32px hsl(240 20% 8% / 0.5);
+    }
+
+    .track-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .track-btn {
+      padding: 18px 30px;
+      background: var(--gradient-card);
+      border: 2px solid hsl(var(--border));
+      border-radius: 50px;
+      color: hsl(var(--foreground));
+      font-family: 'Orbitron', monospace;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    .track-btn:hover {
+      transform: scale(1.05);
+      border-color: hsl(var(--neon-cyan));
+      background: var(--gradient-primary);
+      color: hsl(var(--primary-foreground));
+      box-shadow: var(--glow-primary);
+    }
+
+    .track-btn.active {
+      border-color: hsl(var(--neon-pink));
+      background: var(--gradient-neon);
+      color: hsl(var(--primary-foreground));
+      box-shadow: var(--glow-neon);
+      transform: scale(1.05);
+    }
+
+    .track-icon {
+      font-size: 1.3rem;
+    }
+
+    .audio-player {
+      background: linear-gradient(145deg, hsl(240 15% 10% / 0.8), hsl(280 20% 14% / 0.6));
+      border-radius: 15px;
+      padding: 30px;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .player-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      font-size: 1.2rem;
+    }
+
+    .current-track {
+      color: hsl(var(--neon-cyan));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Orbitron', monospace;
+      text-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5);
+    }
+
+    .track-time {
+      color: hsl(var(--neon-pink));
+      font-family: 'Space Mono', monospace;
+      text-shadow: 0 0 10px hsl(var(--neon-pink) / 0.5);
+    }
+
+    .player-controls {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .play-pause-btn {
+      background: var(--gradient-neon);
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.8rem;
+      box-shadow: var(--glow-neon);
+    }
+
+    .play-pause-btn:hover {
+      transform: scale(1.1);
+      box-shadow: var(--glow-neon), var(--shadow-retro);
+    }
+
+    .progress-container {
+      flex: 1;
+      margin: 0 25px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: hsl(var(--border) / 0.3);
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gradient-neon);
+      width: 0%;
+      transition: width 0.1s ease;
+      border-radius: 5px;
+      box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.8);
+    }
+
+    .volume-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .volume-icon {
+      font-size: 1.4rem;
+      color: hsl(var(--neon-cyan));
+    }
+
+    .volume-slider {
+      width: 100px;
+      height: 8px;
+      background: hsl(var(--border) / 0.3);
+      outline: none;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: var(--gradient-neon);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.8);
+    }
+
+    .volume-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: var(--gradient-neon);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.8);
+    }
+
+    .retro-button {
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-family: 'Orbitron', monospace;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: var(--gradient-primary);
+      color: hsl(var(--primary-foreground));
+      border: 2px solid transparent;
+      box-shadow: var(--glow-primary);
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .retro-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .retro-button:hover::before {
+      left: 100%;
+    }
+
+    .retro-button:hover {
+      transform: scale(1.05);
+      box-shadow: var(--glow-primary), var(--shadow-retro);
+      border-color: hsl(var(--primary));
+    }
+
+    .cta-buttons {
+      text-align: center;
+      margin-top: 80px;
+      padding: 50px;
+      background: var(--gradient-card);
+      border-radius: 25px;
+      border: 1px solid hsl(var(--border));
+    }
+
+    .video-placeholder {
+      margin-top: 80px;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      display: inline-block;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--glow-secondary);
+      border: 2px solid hsl(var(--border));
+      transition: transform 0.3s ease;
+    }
+
+    .video-wrapper:hover {
+      transform: scale(1.02);
+      box-shadow: var(--glow-primary);
+    }
+
+    .video-placeholder iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 450px;
+      border: none;
+      display: block;
+    }
+
+    .video-fallback {
+      position: relative;
+      cursor: pointer;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .play-overlay:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .play-button {
+      background: var(--gradient-neon);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+      box-shadow: var(--glow-neon);
+      transition: all 0.3s ease;
+      /* Убираем анимацию pulse */
+    }
+
+    .play-button:hover {
+      transform: scale(1.1);
+      box-shadow: var(--glow-neon), var(--shadow-retro);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 40px;
+      font-size: 1rem;
+      opacity: 0.8;
+      background: var(--gradient-card);
+      border-top: 2px solid hsl(var(--border));
+      font-family: 'Orbitron', monospace;
+      color: hsl(var(--neon-cyan));
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 15px 40px;
+      }
+
+      .retro-card {
+        padding: 40px 20px;
+        margin: 30px 15px;
+      }
+
+      .retro-button {
+        display: block;
+        margin: 15px auto;
+        max-width: 300px;
+      }
+
+      .video-placeholder iframe {
+        height: 250px;
+      }
+
+      h1 {
+        letter-spacing: 3px;
+      }
+
+      .track-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .track-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      .player-controls {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .progress-container {
+        order: 3;
+        flex-basis: 100%;
+        margin: 20px 0 0 0;
+      }
+
+      .volume-container {
+        margin-left: auto;
+      }
+
+      .demo-title {
+        font-size: 2rem;
+      }
+
+      .audio-demo {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+  </div>
+
+  <header>
+    <h1>TONY'S MEDIA</h1>
+    <div class="tagline">From Sound to Impact — Let Your Video <em>Be Heard</em></div>
+    <div class="sound-waves">
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+      <div class="sound-wave"></div>
+    </div>
+  </header>
+
+  <div class="retro-card">
+    <h2>🎧 Want Your Video to <em>Sound</em> as Good as It Looks?</h2>
+    <p>I'm Tony — I make videos <strong>feel</strong> powerful by blending voice, music, and sound effects that grab attention and keep people watching.</p>
+    <p>Whether it's a quick Reel or a full doc, I'll make sure your sound is clean, smooth, and hits just right.</p>
+  </div>
+
+  <div class="retro-card">
+    <h2>✅ What I Do for You</h2>
+    <ul>
+      <li>Make voices sound clear and crisp</li>
+      <li>Add the right background sounds and effects</li>
+      <li>Pick music that fits your vibe — or create custom sounds</li>
+      <li>Mix everything so it sounds great on any platform</li>
+    </ul>
+
+    <div class="audio-demo">
+      <h3 class="demo-title">The Difference</h3>
+      <p class="demo-subtitle">Hear the transformation in your audio</p>
+      
+      <div class="audio-player-container">
+        <div class="track-buttons">
+          <button class="track-btn active" data-track="fixed">
+            <span class="track-icon">✨</span>
+            <span class="track-label">My Fix + AI</span>
+          </button>
+          <button class="track-btn" data-track="original">
+            <span class="track-icon">🎵</span>
+            <span class="track-label">Original</span>
+          </button>
+          <button class="track-btn" data-track="ai">
+            <span class="track-icon">🤖</span>
+            <span class="track-label">Just AI</span>
+          </button>
+        </div>
+
+        <div class="audio-player">
+          <div class="player-info">
+            <span class="current-track">My Fix + AI Magic</span>
+            <span class="track-time">0:00 / 0:00</span>
+          </div>
+          
+          <div class="player-controls">
+            <button class="play-pause-btn" id="playPauseBtn">
+              <span class="play-icon">▶️</span>
+            </button>
+            
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+            
+            <div class="volume-container">
+              <span class="volume-icon">🔊</span>
+              <input type="range" class="volume-slider" min="0" max="100" value="70">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="audioPlayer" preload="metadata">
+        <source src="path/to/my-fix-ai.mp3" type="audio/mpeg" data-track="fixed">
+        <source src="path/to/original.mp3" type="audio/mpeg" data-track="original">
+        <source src="path/to/just-ai.mp3" type="audio/mpeg" data-track="ai">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="retro-card">
+    <h2>📦 What You Get</h2>
+    <ul>
+      <li>Final audio or video file ready to use</li>
+      <li>Clean, clear sound that fits your style and volume needs</li>
+      <li>Fast delivery and easy feedback process</li>
+    </ul>
+  </div>
+
+  <div class="retro-card">
+    <h2>💬 Why Me?</h2>
+    <p>I don't rely on presets — I actually <strong>listen</strong> and make every sound work perfectly. You'll hear the difference.</p>
+    <p>🎙️ Got a short clip? Send it over and I'll show you what's possible — no strings.</p>
+  </div>
+
+  <div class="retro-card faq">
+    <h2>❓ FAQs</h2>
+    <div class="question">What kind of videos do you work with?</div>
+    <p>I work with everything from short social media clips (Reels, TikToks) to longer videos like YouTube content, podcasts, and documentaries. If your video needs clean sound, music, or effects — I can help.</p>
+
+    <div class="question">Can you match the sound style I want?</div>
+    <p>Absolutely. Just send me a reference or describe the vibe you're going for — cinematic, punchy, chill, fast-paced, etc. I'll tailor the mix to fit your vision and make sure it sounds just right.</p>
+  </div>
+
+  <div class="video-placeholder">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" 
+              src="https://www.youtube-nocookie.com/embed/MNo0lYVspU0" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+      
+      <div class="video-fallback" style="display: none;">
+        <div class="video-thumbnail" onclick="openVideo()">
+          <img src="https://img.youtube.com/vi/MNo0lYVspU0/maxresdefault.jpg" 
+               alt="Video Thumbnail" 
+               style="width: 100%; height: auto; border-radius: 15px;">
+          <div class="play-overlay">
+            <div class="play-button">▶️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="#" class="retro-button">🚀 Let's Make Your Video Shine</a>
+    <a href="#" class="retro-button">📧 Send Me Your Audio Sample</a>
+  </div>
+
+  <footer>
+    <p>© 2024 Tony's Media — Your Sound, Perfected</p>
+  </footer>
+
+  <script>
+    // Audio player functionality (placeholder - no actual audio files)
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const trackButtons = document.querySelectorAll('.track-btn');
