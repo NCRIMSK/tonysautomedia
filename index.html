@@ -42,13 +42,14 @@
       --shadow-retro: 8px 8px 0px hsl(var(--primary) / 0.3);
     }
 
-    body {
-      font-family: 'Space Mono', monospace;
-      background: var(--gradient-background);
-      color: hsl(var(--foreground));
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
+      body {
+        font-family: 'Space Mono', monospace;
+        background: var(--gradient-background);
+        color: hsl(var(--foreground));
+        overflow-x: hidden;
+        min-height: 100vh;
+        padding-bottom: 120px;
+      }
 
     /* Animated Background - убираем анимацию float */
     .animated-bg {
@@ -601,14 +602,25 @@
     }
 
     footer {
-      text-align: center;
-      padding: 60px 40px;
-      font-size: 1rem;
-      opacity: 0.8;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      font-size: 0.9rem;
       background: var(--gradient-card);
       border-top: 2px solid hsl(var(--border));
       font-family: 'Orbitron', monospace;
       color: hsl(var(--neon-cyan));
+    }
+    footer .contact-info {
+      text-align: right;
+      direction: rtl;
+      color: #888;
+      font-family: 'Space Mono', monospace;
     }
 
     /* Mobile responsiveness */
@@ -817,6 +829,12 @@
 
   <footer>
     <p>© 2024 Tony's Media — Your Sound, Perfected</p>
+    <div class="contact-info">
+      <p>אנטון זצ'וסוב</p>
+      <p>בני בנימין 3 דירה 28</p>
+      <p>נתניה, 4201959</p>
+      <p>contentmage@tonysautomedia.com</p>
+    </div>
   </footer>
 
   <script>
