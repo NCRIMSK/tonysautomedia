@@ -1,0 +1,149 @@
+:root {
+  --black: #000000;
+  --magenta: #C100E0;
+  --blue: #3B00BD;
+  --cyan: #00C5E1;
+  --light: #D0D0D8;
+  --dark-gray: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: var(--light);
+  font-family: Arial, sans-serif;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  color: var(--light);
+  z-index: 1000;
+}
+
+header {
+  top: 0;
+  background: linear-gradient(to bottom, var(--magenta), transparent);
+}
+
+footer {
+  bottom: 0;
+  background: linear-gradient(to top, var(--magenta), transparent);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-btn {
+  background: var(--blue);
+  color: var(--black);
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background: var(--cyan);
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.muted {
+  opacity: 0.6;
+}
+
+.box {
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--black);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  background: var(--magenta);
+  color: var(--black);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--blue);
+  margin: 28px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .contact-info {
+  text-align: right;
+  direction: rtl;
+  color: var(--dark-gray);
+  line-height: 1.2;
+  font-size: 0.8rem;
+}
+
+.player {
+  margin-top: 20px;
+}
+
+.track-select {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.track-select button {
+  background: var(--blue);
+  color: var(--black);
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.track-select button.active {
+  background: var(--magenta);
+}
+
+.track-select button:hover {
+  background: var(--cyan);
+}
+
+#play-pause {
+  background: var(--blue);
+  color: var(--black);
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#play-pause:hover {
+  background: var(--cyan);
+}
