@@ -15,9 +15,35 @@
 
 body {
   font-family: sans-serif;
-  background-color: var(--light-gray);
-  color: var(--black);
+  background: linear-gradient(to bottom, var(--black), var(--indigo));
+  color: var(--light-gray);
   padding-top: 60px;
+}
+
+/* Content blocks */
+.retro-card,
+.tagline,
+.sound-waves,
+.audio-demo,
+.faq,
+.cta-buttons,
+.wrap {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+header:not(.main-nav) {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+.audio-player-simple {
+  display: flex;
+  gap: 10px;
+}
+
+.audio-track {
+  text-align: center;
 }
 
 /* Navigation */
@@ -30,7 +56,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(to bottom, var(--magenta), transparent);
+  background-color: var(--black);
 }
 
 .nav-btn {
@@ -56,13 +82,20 @@ body {
 
 /* Footer */
 footer {
-  background: linear-gradient(to top, var(--magenta), transparent);
+  background-color: var(--black);
   text-align: center;
   padding: 20px;
-  color: var(--black);
+  color: var(--light-gray);
 }
 
 footer .contact-info {
   color: var(--dark-gray);
+}
+
+footer .contact-info p {
+  margin: 2px 0;
+  line-height: 1.2;
+  color: #555;
+  font-size: 0.9em;
 }
 
