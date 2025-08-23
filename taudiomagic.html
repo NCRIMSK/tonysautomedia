@@ -9,7 +9,6 @@
 </head>
 <body>
   <header class="main-nav">
-    <a href="taudiomagic.html" class="nav-btn">TaudioMagic</a>
     <a href="index.html" class="nav-btn">Home</a>
   </header>
   <!-- Animated Background -->
@@ -51,7 +50,26 @@
     <div class="audio-demo">
       <h3 class="demo-title">The Difference</h3>
       <p class="demo-subtitle">Hear the transformation in your audio</p>
-      
+      <div class="audio-player-simple">
+        <div class="audio-track">
+          <p class="track-label">Original</p>
+          <audio controls preload="none">
+            <source src="Original.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="audio-track">
+          <p class="track-label">Just AI</p>
+          <audio controls preload="none">
+            <source src="Just%20AI.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="audio-track">
+          <p class="track-label">My Fix + AI</p>
+          <audio controls preload="none">
+            <source src="My%20fix%20plus%20AI.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
       <div class="audio-player-container">
         <div class="track-buttons">
           <button class="track-btn active" data-track="fixed">

@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="main-nav">
-    <a href="taudiomagic.html" class="nav-btn">TaudioMagic</a>
+    <a href="taudiomagic.html" class="nav-btn">Audio Magic</a>
     <a href="index.html" class="nav-btn">Home</a>
   </header>
   <!-- Animated Background -->
@@ -47,59 +47,6 @@
       <li>Pick music that fits your vibe — or create custom sounds</li>
       <li>Mix everything so it sounds great on any platform</li>
     </ul>
-
-    <div class="audio-demo">
-      <h3 class="demo-title">The Difference</h3>
-      <p class="demo-subtitle">Hear the transformation in your audio</p>
-      
-      <div class="audio-player-container">
-        <div class="track-buttons">
-          <button class="track-btn active" data-track="fixed">
-            <span class="track-icon">✨</span>
-            <span class="track-label">My Fix + AI</span>
-          </button>
-          <button class="track-btn" data-track="original">
-            <span class="track-icon">🎵</span>
-            <span class="track-label">Original</span>
-          </button>
-          <button class="track-btn" data-track="ai">
-            <span class="track-icon">🤖</span>
-            <span class="track-label">Just AI</span>
-          </button>
-        </div>
-
-        <div class="audio-player">
-          <div class="player-info">
-            <span class="current-track">My Fix + AI Magic</span>
-            <span class="track-time">0:00 / 0:00</span>
-          </div>
-          
-          <div class="player-controls">
-            <button class="play-pause-btn" id="playPauseBtn">
-              <span class="play-icon">▶️</span>
-            </button>
-            
-            <div class="progress-container">
-              <div class="progress-bar">
-                <div class="progress-fill"></div>
-              </div>
-            </div>
-            
-            <div class="volume-container">
-              <span class="volume-icon">🔊</span>
-              <input type="range" class="volume-slider" min="0" max="100" value="70">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <audio id="audioPlayer" preload="metadata">
-        <source src="path/to/my-fix-ai.mp3" type="audio/mpeg" data-track="fixed">
-        <source src="path/to/original.mp3" type="audio/mpeg" data-track="original">
-        <source src="path/to/just-ai.mp3" type="audio/mpeg" data-track="ai">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
   </div>
 
   <div class="retro-card">
@@ -162,12 +109,5 @@
     </div>
   </footer>
 
-  <script>
-    // Audio player functionality (placeholder - no actual audio files)
-    const audioPlayer = document.getElementById('audioPlayer');
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const trackButtons = document.querySelectorAll('.track-btn');
-    // Placeholder: audio functionality not implemented
-  </script>
 </body>
 </html>

@@ -16,6 +16,37 @@
 }
 
 body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, var(--black), var(--indigo));
+  color: var(--light-gray);
+  padding-top: 60px;
+}
+
+/* Content blocks */
+.retro-card,
+.tagline,
+.sound-waves,
+.audio-demo,
+.faq,
+.cta-buttons,
+.wrap {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+header:not(.main-nav) {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+.audio-player-simple {
+  display: flex;
+  gap: 10px;
+}
+
+.audio-track {
+  text-align: center;
+=======
   font-family: 'Space Mono', monospace;
   background-color: var(--light-gray);
   color: var(--black);
@@ -36,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(to bottom, var(--magenta), transparent);
+  background-color: var(--black);
 }
 
 .nav-btn {
@@ -62,10 +93,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
-  background: linear-gradient(to top, var(--magenta), transparent);
+  background-color: var(--black);
   text-align: center;
   padding: 20px;
-  color: var(--black);
+  color: var(--light-gray);
 }
 
 footer .contact-info {
