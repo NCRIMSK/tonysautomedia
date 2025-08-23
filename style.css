@@ -26,17 +26,10 @@ body {
 
 /* Content blocks */
 .retro-card,
-.tagline,
-.sound-waves,
 .audio-demo,
 .faq,
 .cta-buttons,
 .wrap {
-  background-color: var(--black);
-  color: var(--light-gray);
-}
-
-header:not(.main-nav) {
   background-color: var(--black);
   color: var(--light-gray);
 }
@@ -115,8 +108,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
+
+  background: linear-gradient(to top, var(--magenta), rgba(193, 0, 224, 0) 80%);
+
   background: linear-gradient(to top, var(--magenta), transparent);
   background-color: var(--black);
+
   padding: 20px;
   color: var(--light-gray);
   display: flex;
