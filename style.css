@@ -28,9 +28,11 @@ body {
 .retro-card,
 .audio-demo,
 .faq,
-.cta-buttons,
 .wrap {
   background-color: var(--black);
+  color: var(--light-gray);
+}
+.cta-buttons{
   color: var(--light-gray);
 }
 
