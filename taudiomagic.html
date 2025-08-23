@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tony's Media and Automation</title>
+  <title>Tony's Audio Magic</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="main-nav">
-    <a href="taudiomagic.html" class="nav-btn">Audio Magic</a>
     <a href="index.html" class="nav-btn">Home</a>
   </header>
   <!-- Animated Background -->
@@ -20,7 +19,7 @@
   </div>
 
   <header>
-    <h1>Tony's Media and Automation</h1>
+    <h1>TONY'S MEDIA</h1>
     <div class="tagline">From Sound to Impact — Let Your Video <em>Be Heard</em></div>
     <div class="sound-waves">
       <div class="sound-wave"></div>
@@ -47,6 +46,32 @@
       <li>Pick music that fits your vibe — or create custom sounds</li>
       <li>Mix everything so it sounds great on any platform</li>
     </ul>
+
+    <div class="audio-demo">
+      <h3 class="demo-title">The Difference</h3>
+      <p class="demo-subtitle">Hear the transformation in your audio</p>
+
+      <div class="audio-player-simple">
+        <div class="audio-track">
+          <p class="track-label">Original</p>
+          <audio controls preload="none">
+            <source src="Original.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="audio-track">
+          <p class="track-label">Just AI</p>
+          <audio controls preload="none">
+            <source src="Just%20AI.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="audio-track">
+          <p class="track-label">My Fix + AI</p>
+          <audio controls preload="none">
+            <source src="My%20fix%20plus%20AI.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="retro-card">
@@ -73,6 +98,27 @@
     <p>Absolutely. Just send me a reference or describe the vibe you're going for — cinematic, punchy, chill, fast-paced, etc. I'll tailor the mix to fit your vision and make sure it sounds just right.</p>
   </div>
 
+  <div class="video-placeholder">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" 
+              src="https://www.youtube-nocookie.com/embed/MNo0lYVspU0" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+      
+      <div class="video-fallback">
+        <div class="video-thumbnail" onclick="openVideo()">
+          <img src="https://img.youtube.com/vi/MNo0lYVspU0/maxresdefault.jpg" alt="Video Thumbnail" class="video-thumb">
+          <div class="play-overlay">
+            <div class="play-button">▶️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="cta-buttons">
     <a href="#" class="retro-button">🚀 Let's Make Your Video Shine</a>
     <a href="#" class="retro-button">📧 Send Me Your Audio Sample</a>
@@ -88,6 +134,5 @@
     </div>
   </footer>
 
-  
 </body>
 </html>
