@@ -32,10 +32,6 @@ body {
   background-color: var(--black);
   color: var(--light-gray);
 }
-.cta-buttons{
-  color: var(--light-gray);
-}
-
 .retro-card{
   background-color: var(--black);
   color: var(--light-gray);
@@ -47,6 +43,16 @@ body {
   gap: 20px;            /* расстояние между картами */
   justify-content: space-between;
   align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  .cards-row {
+    flex-direction: column;
+  }
+
+  .cards-row .retro-card {
+    flex: none;
+  }
 }
 
 
@@ -96,22 +102,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-btn:hover {
-  background-color: var(--cyan);
-}
-
-/* Generic buttons */
-.retro-button {
-  background: transparent;
-  background-color: var(--indigo);
-  color: var(--light-gray);
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  display: inline-block;
-  transition: background-color 0.3s;
-}
-
-.retro-button:hover {
   background-color: var(--cyan);
 }
 
@@ -354,11 +344,25 @@ footer .contact-info p {
 
 /* Call to action */
 .cta-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  z-index: 1000;
+}
+
+.cta-buttons .retro-button {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0;
+  font-size: 24px;
 }
 
 .retro-button {
@@ -368,7 +372,11 @@ footer .contact-info p {
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 4px 0 var(--indigo);
-  transition: transform 0.1s, box-shadow 0.1s;
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+.retro-button:hover {
+  background-color: var(--cyan);
 }
 
 .retro-button:active {
