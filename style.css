@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 footer {
   background: linear-gradient(to top, var(--magenta), transparent);
+  background-color: var(--black);
   padding: 20px;
   color: var(--light-gray);
   display: flex;
