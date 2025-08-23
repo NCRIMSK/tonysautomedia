@@ -19,6 +19,40 @@ body {
   font-family: sans-serif;
   background: linear-gradient(to bottom, var(--black), var(--indigo));
   color: var(--light-gray);
+
+  padding-top: 60px;
+}
+
+/* Content blocks */
+.retro-card,
+.tagline,
+.sound-waves,
+.audio-demo,
+.faq,
+.cta-buttons,
+.wrap {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+header:not(.main-nav) {
+  background-color: var(--black);
+  color: var(--light-gray);
+}
+
+header:not(.main-nav) h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.audio-player-simple {
+  display: flex;
+  gap: 10px;
+}
+
+.audio-track {
+  text-align: center;
+
   padding-top: 60px;
 }
 
@@ -55,6 +89,7 @@ header:not(.main-nav) {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
+
 }
 
 /* Navigation */
@@ -80,6 +115,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-btn:hover {
+  background-color: var(--cyan);
+}
+
+/* Generic buttons */
+.retro-button {
+  background-color: var(--indigo);
+  color: var(--light-gray);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.retro-button:hover {
   background-color: var(--cyan);
 }
 
