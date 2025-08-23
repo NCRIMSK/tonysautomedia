@@ -94,9 +94,9 @@
       </div>
 
       <audio id="audioPlayer" preload="metadata">
-        <source src="path/to/my-fix-ai.mp3" type="audio/mpeg" data-track="fixed">
-        <source src="path/to/original.mp3" type="audio/mpeg" data-track="original">
-        <source src="path/to/just-ai.mp3" type="audio/mpeg" data-track="ai">
+        <source src="My%20fix%20plus%20AI.mp3" type="audio/mpeg" data-track="fixed">
+        <source src="Original.mp3" type="audio/mpeg" data-track="original">
+        <source src="Just%20AI.mp3" type="audio/mpeg" data-track="ai">
         Your browser does not support the audio element.
       </audio>
     </div>
@@ -163,11 +163,62 @@
   </footer>
 
   <script>
-    // Audio player functionality (placeholder - no actual audio files)
     const audioPlayer = document.getElementById('audioPlayer');
     const playPauseBtn = document.getElementById('playPauseBtn');
     const trackButtons = document.querySelectorAll('.track-btn');
-    // Placeholder: audio functionality not implemented
+    const trackLabel = document.querySelector('.current-track');
+    const progressFill = document.querySelector('.progress-fill');
+    const trackTime = document.querySelector('.track-time');
+    const volumeSlider = document.querySelector('.volume-slider');
+
+    const tracks = {
+      fixed: 'My%20fix%20plus%20AI.mp3',
+      original: 'Original.mp3',
+      ai: 'Just%20AI.mp3'
+    };
+
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60) || 0;
+      const s = Math.floor(sec % 60) || 0;
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function loadTrack(key, label) {
+      audioPlayer.src = tracks[key];
+      trackLabel.textContent = label;
+      audioPlayer.play();
+      playPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
+    }
+
+    trackButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        trackButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        loadTrack(btn.dataset.track, btn.querySelector('.track-label').textContent);
+      });
+    });
+
+    playPauseBtn.addEventListener('click', () => {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
+      } else {
+        audioPlayer.pause();
+        playPauseBtn.innerHTML = '<span class="play-icon">▶️</span>';
+      }
+    });
+
+    audioPlayer.addEventListener('timeupdate', () => {
+      const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+      progressFill.style.width = `${progress || 0}%`;
+      trackTime.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+    });
+
+    volumeSlider.addEventListener('input', () => {
+      audioPlayer.volume = volumeSlider.value / 100;
+    });
+
+    loadTrack('fixed', 'My Fix + AI');
   </script>
 </body>
 </html>
