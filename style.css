@@ -25,7 +25,7 @@ body {
 }
 
 /* Content blocks */
-.retro-card,
+
 .audio-demo,
 .faq,
 .wrap {
@@ -35,6 +35,20 @@ body {
 .cta-buttons{
   color: var(--light-gray);
 }
+
+.retro-card{
+  background-color: var(--black);
+  color: var(--light-gray);
+   flex: 1;
+}
+
+.cards-row{
+  display: flex;
+  gap: 20px;            /* расстояние между картами */
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 
 header:not(.main-nav) h1 {
   text-align: center;
