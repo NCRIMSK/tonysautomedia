@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+
 :root {
   --black: #000000;
   --magenta: #C100E0;
@@ -14,10 +16,14 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Space Mono', monospace;
   background-color: var(--light-gray);
   color: var(--black);
   padding-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Navigation */
