@@ -34,9 +34,12 @@
   </header>
 
   <div class="retro-card">
-    <h2>Want Your Video to <em>Sound</em> as Good as It Looks?</h2>
-    <p>I'm Tony — I make videos <strong>feel</strong> powerful by blending voice, music, and sound effects that grab attention and keep people watching.</p>
-    <p>Whether it's a quick Reel or a full doc, I'll make sure your sound is clean, smooth, and hits just right.</p>
+    <p>Great ideas survive shaky video—bad audio kills them.</p>
+    <p>When sound is right, people relax, trust you more, and stay to the end.</p>
+    <p>Hi, I’m Tony. I make voices feel close, clear, and effortless to hear.</p>
+    <p>I’m the calm pair of ears that polishes the space around your words - so your message lands clean, warm, and true. Not louder. Better.</p>
+    <p>If your story matters, let the sound carry it.</p>
+    <p>Friendly, responsive, human.</p>
   </div>
 
   <div class="retro-card">
@@ -190,9 +193,10 @@
 
     function loadTrack(key, label) {
       audioPlayer.src = tracks[key];
+      audioPlayer.load();
       trackLabel.textContent = label;
-      audioPlayer.play();
-      playPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
+      playPauseBtn.innerHTML = '<span class="play-icon">▶️</span>';
+      trackTime.textContent = `0:00 / 0:00`;
     }
 
     trackButtons.forEach(btn => {
@@ -200,6 +204,8 @@
         trackButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         loadTrack(btn.dataset.track, btn.querySelector('.track-label').textContent);
+        audioPlayer.play();
+        playPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
       });
     });
 
@@ -217,6 +223,10 @@
       const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
       progressFill.style.width = `${progress || 0}%`;
       trackTime.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+    });
+
+    audioPlayer.addEventListener('loadedmetadata', () => {
+      trackTime.textContent = `0:00 / ${formatTime(audioPlayer.duration)}`;
     });
 
     volumeSlider.addEventListener('input', () => {
