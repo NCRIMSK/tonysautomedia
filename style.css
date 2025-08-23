@@ -21,6 +21,7 @@ body {
   background: linear-gradient(to bottom, var(--black), var(--deep-purple));
   color: var(--light-gray);
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* Content blocks */
@@ -72,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--black);
+  background: linear-gradient(to bottom, var(--magenta), transparent);
+  z-index: 1000;
 }
 
 .nav-btn {
@@ -113,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
+  background: linear-gradient(to top, var(--magenta), transparent);
   background-color: var(--black);
   padding: 20px;
   color: var(--light-gray);
@@ -120,6 +123,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   direction: ltr;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 footer .contact-info {
