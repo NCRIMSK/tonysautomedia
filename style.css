@@ -49,6 +49,16 @@ body {
   align-items: stretch;
 }
 
+@media (max-width: 600px) {
+  .cards-row {
+    flex-direction: column;
+  }
+
+  .cards-row .retro-card {
+    flex: none;
+  }
+}
+
 
 header:not(.main-nav) h1 {
   text-align: center;
