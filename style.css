@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Generic buttons */
 .retro-button {
+  background: transparent;
   background-color: var(--indigo);
   color: var(--light-gray);
   text-decoration: none;
