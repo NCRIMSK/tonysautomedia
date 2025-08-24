@@ -32,10 +32,20 @@ body {
   background-color: var(--black);
   color: var(--light-gray);
 }
-.cards-row {
+.cards_row {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px; /* расстояние между картами */
+}
+
+.cards_row .retro-card {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 600px) {
+  .cards_row {
+    flex-direction: column;
+  }
 }
 
 header:not(.main-nav) h1 {
@@ -63,6 +73,8 @@ h4,
 h5,
 h6 {
   font-family: "Anton", sans-serif;
+  color: var(--magenta);
+  letter-spacing: 0.05em;
 }
 
 /* Navigation */
@@ -370,11 +382,12 @@ footer .contact-info p {
   justify-content: center;
   font-size: 18px;
   opacity: 0.6;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .cta-buttons .retro-button:hover {
   opacity: 1;
+  transform: scale(1.2);
 }
 
 .cta-buttons .retro-button.pulse {
