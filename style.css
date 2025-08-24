@@ -33,7 +33,7 @@ body {
   color: var(--light-gray);
 }
 .retro-card{
-  background-color: transparent;
+  background-color: var(--black);
   color: var(--light-gray);
    flex: 1;
 }
