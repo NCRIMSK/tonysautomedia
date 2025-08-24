@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://vashsite.ru/sitemap.xml
+Sitemap: https://www.tonysautomedia.com//sitemap.xml
