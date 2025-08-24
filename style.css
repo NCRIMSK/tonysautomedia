@@ -19,7 +19,7 @@
 body {
   font-family: sans-serif;
   background: var(--black);
-  color: var(--light-gray);
+  color: var(--cyan);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -30,7 +30,7 @@ body {
 .faq,
 .wrap {
   background-color: var(--black);
-  color: var(--light-gray);
+  color: var(--cyan);
 }
 .cards_row {
   display: flex;
@@ -62,7 +62,7 @@ header:not(.main-nav) h1 {
   text-align: center;
   font-family: "Space Mono", monospace;
   background-color: var(--light-gray);
-  color: var(--black);
+  color: var(--cyan);
   padding-top: 60px;
 }
 
@@ -93,7 +93,7 @@ h6 {
 
 .nav-btn {
   background-color: var(--indigo);
-  color: var(--light-gray);
+  color: var(--cyan);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -118,7 +118,7 @@ h6 {
 footer {
   background: linear-gradient(to top, var(--magenta), transparent);
   padding: 20px;
-  color: var(--light-gray);
+  color: var(--cyan);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,7 +131,7 @@ footer {
 }
 
 footer .contact-info {
-  color: var(--dark-gray);
+  color: var(--cyan);
   text-align: right;
   direction: rtl;
 }
@@ -139,7 +139,7 @@ footer .contact-info {
 footer .contact-info p {
   margin: 2px 0;
   line-height: 1.2;
-  color: #555;
+  color: var(--cyan);
   font-size: 0.9em;
 }
 
@@ -148,7 +148,7 @@ footer .contact-info p {
   margin-top: 10px;
   font-family: "Space Mono", monospace;
   font-size: 1.2rem;
-  color: var(--indigo);
+  color: var(--cyan);
   text-align: center;
 }
 
@@ -200,35 +200,29 @@ footer .contact-info p {
 /* Retro card */
 .retro-card {
   background: transparent;
-  color: var(--light-gray);
+  color: var(--cyan);
   border: none;
   border-radius: 0;
   box-shadow: none;
   margin: 20px 0;
-  padding: 20px;
+  padding: 0;
   width: 100%;
   display: flex;
   align-items: flex-start;
 }
 
 .retro-card .card-image {
-  margin: 5%;
+  margin: 3%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  clip-path: inset(5% 5% 5% 5%);
-
-  width: auto;
+  clip-path: inset(3% 3% 3% 3%);
+  width: 94%;
   height: auto;
-  max-width: 90%;
-  max-height: 90%;
-
-  height: 100%;
-  max-height: 100%;
-
 }
 
 .retro-card .card-content {
   flex: 1;
+  padding: 3%;
 }
 
 .cards_row .retro-card {
@@ -237,10 +231,9 @@ footer .contact-info p {
 }
 
 .cards_row .retro-card .card-image {
-  width: 90%;
+  width: 94%;
   height: auto;
-  margin: 5%;
-  max-height: none;
+  margin: 3%;
 }
 
 .cards_row .retro-card .card-content {
@@ -277,7 +270,7 @@ footer .contact-info p {
   align-items: center;
   gap: 4px;
   background: var(--indigo);
-  color: var(--light-gray);
+  color: var(--cyan);
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
@@ -292,7 +285,7 @@ footer .contact-info p {
 
 .audio-player {
   background: var(--black);
-  color: var(--light-gray);
+  color: var(--cyan);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -394,7 +387,7 @@ footer .contact-info p {
 
 .play-button {
   font-size: 3rem;
-  color: var(--light-gray);
+  color: var(--cyan);
 }
 
 /* Call to action */
@@ -451,7 +444,7 @@ footer .contact-info p {
 
 .retro-button {
   background: var(--magenta);
-  color: var(--light-gray);
+  color: var(--cyan);
   text-decoration: none;
   padding: 15px 25px;
   border-radius: 4px;
