@@ -96,6 +96,20 @@
     </div>
   </footer>
 
+  <script>
+    const ctaButtons = document.querySelectorAll('.cta-buttons .retro-button');
+
+    function pulseButtons() {
+      ctaButtons.forEach(btn => btn.classList.add('pulse'));
+      setTimeout(() => {
+        ctaButtons.forEach(btn => btn.classList.remove('pulse'));
+      }, 10000);
+    }
+
+    pulseButtons();
+    setInterval(pulseButtons, 60000);
+  </script>
+
 
 </body>
 </html>
