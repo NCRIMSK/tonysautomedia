@@ -187,6 +187,7 @@
     </script>
     <script>
       const blobs = document.querySelectorAll('.blob');
+
       const quadrants = [
         { x: [-50, 0], y: [-50, 0] }, // top-left
         { x: [0, 50], y: [-50, 0] },  // top-right
@@ -208,6 +209,28 @@
         moveBlob(b, q);
         setInterval(() => moveBlob(b, q), 30000);
       });
+
+
+
+      function moveBlob(b) {
+        const x = Math.random() * 100 - 50;
+        const y = Math.random() * 100 - 50;
+        b.style.transform = `translate(${x}vw, ${y}vh)`;
+      }
+
+      blobs.forEach((b) => {
+        moveBlob(b);
+        setInterval(() => moveBlob(b), 30000);
+      });
+
+      setInterval(() => {
+        blobs.forEach((b) => {
+          b.style.setProperty('--tx', `${Math.random() * 40 - 20}vmax`);
+          b.style.setProperty('--ty', `${Math.random() * 40 - 20}vmax`);
+        });
+      }, 8000);
+
+
     </script>
   </body>
 </html>

@@ -443,6 +443,7 @@ footer .contact-info p {
 }
 
 
+
 .blob {
   position: absolute;
   top: 50%;
@@ -453,21 +454,69 @@ footer .contact-info p {
   background: radial-gradient(circle, var(--deep-purple) 0%, transparent 80%);
   mix-blend-mode: lighten;
   filter: blur(120px);
+
   opacity: 0.7;
+
   transition: transform 30s ease-in-out;
   animation: morph 20s infinite alternate ease-in-out;
 }
 
 .blob:nth-child(1) {
+
+  transform: translate(-30vw, -30vh);
+
   animation-delay: 0s;
 }
 
 .blob:nth-child(2) {
+
+  transform: translate(30vw, -20vh);
+
   animation-delay: -6s;
 }
 
 .blob:nth-child(3) {
+
   animation-delay: -12s;
+
+  transform: translate(-20vw, 25vh);
+  animation-delay: -12s;
+
+.blob {
+  position: absolute;
+  width: 50vmax;
+  height: 50vmax;
+  background: radial-gradient(circle, var(--deep-purple) 0%, transparent 70%);
+  mix-blend-mode: lighten;
+  filter: blur(80px);
+  animation: move 12s infinite alternate ease-in-out,
+    morph 8s infinite alternate ease-in-out;
+}
+
+.blob:nth-child(1) {
+  left: 35%;
+  top: 35%;
+  animation-delay: 0s, 0s;
+}
+
+.blob:nth-child(2) {
+  left: 55%;
+  top: 40%;
+  animation-delay: -2s, -1s;
+}
+
+.blob:nth-child(3) {
+  left: 45%;
+  top: 55%;
+  animation-delay: -4s, -3s;
+}
+
+@keyframes move {
+  to {
+    transform: translate(var(--tx, 0), var(--ty, 0));
+  }
+
+
 }
 
 @keyframes morph {
