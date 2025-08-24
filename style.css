@@ -214,8 +214,8 @@ footer .contact-info p {
 .retro-card .card-image {
   margin: 5%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  clip-path: inset(20% 20% 20% 20%);
+  object-fit: contain;
+  clip-path: inset(5% 5% 5% 5%);
 
   width: auto;
   height: auto;
