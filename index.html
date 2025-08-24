@@ -34,10 +34,10 @@
       <a href="index.html" class="nav-btn">Home</a>
     </header>
     <!-- Animated Background -->
-    <div class="animated-bg">
-      <div class="floating-shape"></div>
-      <div class="floating-shape"></div>
-      <div class="floating-shape"></div>
+    <div class="blob-bg">
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
     </div>
 
     <header>
@@ -184,6 +184,15 @@
 
       pulseButtons();
       setInterval(pulseButtons, 60000);
+    </script>
+    <script>
+      const blobs = document.querySelectorAll('.blob');
+      setInterval(() => {
+        blobs.forEach((b) => {
+          b.style.setProperty('--tx', `${Math.random() * 40 - 20}vmax`);
+          b.style.setProperty('--ty', `${Math.random() * 40 - 20}vmax`);
+        });
+      }, 8000);
     </script>
   </body>
 </html>
