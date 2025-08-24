@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --black: #000000;
-  --magenta: #C100E0;
-  --indigo: #3B00BD;
-  --deep-purple: #2B0057;
-  --cyan: #00C5E1;
-  --light-gray: #D0D0D8;
+  --magenta: #c100e0;
+  --indigo: #3b00bd;
+  --deep-purple: #2b0057;
+  --cyan: #00c5e1;
+  --light-gray: #d0d0d8;
   --dark-gray: #333333;
 }
 
@@ -32,29 +32,11 @@ body {
   background-color: var(--black);
   color: var(--light-gray);
 }
-.retro-card{
-  background-color: var(--black);
-  color: var(--light-gray);
-   flex: 1;
-}
-
-.cards-row{
+.cards-row {
   display: flex;
-  gap: 20px;            /* расстояние между картами */
-  justify-content: space-between;
-  align-items: stretch;
+  flex-direction: column;
+  gap: 20px; /* расстояние между картами */
 }
-
-@media (max-width: 600px) {
-  .cards-row {
-    flex-direction: column;
-  }
-
-  .cards-row .retro-card {
-    flex: none;
-  }
-}
-
 
 header:not(.main-nav) h1 {
   text-align: center;
@@ -68,14 +50,19 @@ header:not(.main-nav) h1 {
 
 .audio-track {
   text-align: center;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   background-color: var(--light-gray);
   color: var(--black);
   padding-top: 60px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anton", sans-serif;
 }
 
 /* Navigation */
@@ -106,7 +93,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Video fallback image */
-.video-fallback { display: none; }
+.video-fallback {
+  display: none;
+}
 .video-thumb {
   width: 100%;
   height: auto;
@@ -115,7 +104,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
-
   background: linear-gradient(to top, var(--magenta), transparent);
   padding: 20px;
   color: var(--light-gray);
@@ -146,7 +134,7 @@ footer .contact-info p {
 /* Header tagline */
 .tagline {
   margin-top: 10px;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.2rem;
   color: var(--indigo);
   text-align: center;
@@ -168,34 +156,51 @@ footer .contact-info p {
   animation: wave 1s infinite ease-in-out;
 }
 
-.sound-wave:nth-child(2) { animation-delay: 0.1s; }
-.sound-wave:nth-child(3) { animation-delay: 0.2s; }
-.sound-wave:nth-child(4) { animation-delay: 0.3s; }
-.sound-wave:nth-child(5) { animation-delay: 0.4s; }
-.sound-wave:nth-child(6) { animation-delay: 0.5s; }
-.sound-wave:nth-child(7) { animation-delay: 0.6s; }
+.sound-wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.sound-wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.sound-wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.sound-wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.sound-wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.sound-wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
 
 @keyframes wave {
-  0%, 100% { height: 5px; }
-  50% { height: 40px; }
+  0%,
+  100% {
+    height: 5px;
+  }
+  50% {
+    height: 40px;
+  }
 }
 
 /* Retro card */
-  .retro-card {
-    background: var(--black);
-    color: var(--light-gray);
-    border: 2px solid var(--dark-gray);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-  }
+.retro-card {
+  background: transparent;
+  color: var(--light-gray);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 20px 0;
+  padding: 20px;
+  width: 100%;
+}
 
 /* FAQ section inherits retro-card styles */
-  .retro-card.faq {
-    background: var(--black);
-  }
+.retro-card.faq {
+  background: transparent;
+}
 
 .faq .question {
   font-weight: bold;
@@ -247,7 +252,7 @@ footer .contact-info p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 0.9rem;
 }
 
@@ -377,18 +382,19 @@ footer .contact-info p {
 }
 
 @keyframes button-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 4px 0 var(--indigo);
   }
   50% {
     transform: scale(1.5);
-    box-shadow: 0 4px 0 var(--indigo), 0 0 20px 20px var(--light-gray);
-
+    box-shadow:
+      0 4px 0 var(--indigo),
+      0 0 20px 20px var(--light-gray);
   }
   50% {
     transform: scale(1.5);
-
   }
 }
 
@@ -399,7 +405,10 @@ footer .contact-info p {
   padding: 15px 25px;
   border-radius: 4px;
   box-shadow: 0 4px 0 var(--indigo);
-  transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+  transition:
+    background-color 0.3s,
+    transform 0.1s,
+    box-shadow 0.1s;
 }
 
 .retro-button:hover {
@@ -432,11 +441,21 @@ footer .contact-info p {
   animation: float 6s infinite ease-in-out;
 }
 
-.floating-shape:nth-child(2) { left: 20%; animation-delay: 1s; }
-.floating-shape:nth-child(3) { left: 60%; animation-delay: 2s; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-40px); }
+.floating-shape:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+.floating-shape:nth-child(3) {
+  left: 60%;
+  animation-delay: 2s;
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
