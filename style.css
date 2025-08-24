@@ -215,7 +215,7 @@ footer .contact-info p {
   margin: 5%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  clip-path: inset(20% 20% 20% 20%);
+
 
   width: auto;
   height: auto;
