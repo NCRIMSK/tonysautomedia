@@ -372,6 +372,21 @@ footer .contact-info p {
   opacity: 1;
 }
 
+.cta-buttons .retro-button.pulse {
+  animation: button-pulse 10s ease-in-out;
+}
+
+@keyframes button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 0 var(--indigo);
+  }
+  50% {
+    transform: scale(1.5);
+    box-shadow: 0 4px 0 var(--indigo), 0 0 20px 20px var(--light-gray);
+  }
+}
+
 .retro-button {
   background: var(--magenta);
   color: var(--light-gray);
