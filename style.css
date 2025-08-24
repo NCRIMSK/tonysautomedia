@@ -442,6 +442,36 @@ footer .contact-info p {
   background: var(--black);
 }
 
+
+
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vmax;
+  height: 90vmax;
+  margin: -45vmax 0 0 -45vmax;
+  background: radial-gradient(circle, var(--deep-purple) 0%, transparent 80%);
+  mix-blend-mode: lighten;
+  filter: blur(120px);
+  transition: transform 30s ease-in-out;
+  animation: morph 20s infinite alternate ease-in-out;
+}
+
+.blob:nth-child(1) {
+  transform: translate(-30vw, -30vh);
+  animation-delay: 0s;
+}
+
+.blob:nth-child(2) {
+  transform: translate(30vw, -20vh);
+  animation-delay: -6s;
+}
+
+.blob:nth-child(3) {
+  transform: translate(-20vw, 25vh);
+  animation-delay: -12s;
+
 .blob {
   position: absolute;
   width: 50vmax;
@@ -475,6 +505,7 @@ footer .contact-info p {
   to {
     transform: translate(var(--tx, 0), var(--ty, 0));
   }
+
 }
 
 @keyframes morph {
