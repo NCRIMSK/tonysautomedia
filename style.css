@@ -53,14 +53,15 @@ body {
 }
 
 .cards_column .retro-card .card-image {
-  width: 50%;
-  height: 100%;
+  width: 25%;
+  height: 50%;
   object-fit: cover;
   margin: 0;
+  align-self: center;
 }
 
 .cards_column .retro-card .card-content {
-  width: 50%;
+  width: 75%;
   padding: 3%;
 }
 
