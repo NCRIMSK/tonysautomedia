@@ -48,6 +48,22 @@ body {
   }
 }
 
+.cards_column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* расстояние между картами */
+}
+
+.cards_column .retro-card {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 600px) {
+  .cards_column {
+    flex-direction: row;
+  }
+}
+
 header:not(.main-nav) h1 {
   text-align: center;
   font-size: 4rem;
@@ -237,6 +253,21 @@ footer .contact-info p {
 }
 
 .cards_row .retro-card .card-content {
+  width: 100%;
+}
+
+.cards_column .retro-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.cards_column .retro-card .card-image {
+  width: 94%;
+  height: auto;
+  margin: 3%;
+}
+
+.cards_column .retro-card .card-content {
   width: 100%;
 }
 
