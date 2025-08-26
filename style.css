@@ -34,33 +34,39 @@ body {
 }
 .cards_row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* расстояние между картами */
+  gap: 20px; /* space between columns */
 }
 
-.cards_row .retro-card {
-  flex: 1 1 300px;
+.cards_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between cards */
+}
+
+.cards_column .retro-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+
+.cards_column .retro-card .card-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.cards_column .retro-card .card-content {
+  width: 50%;
+  padding: 3%;
 }
 
 @media (max-width: 600px) {
   .cards_row {
     flex-direction: column;
-  }
-}
-
-.cards_column {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* расстояние между картами */
-}
-
-.cards_column .retro-card {
-  flex: 1 1 300px;
-}
-
-@media (max-width: 600px) {
-  .cards_column {
-    flex-direction: row;
   }
 }
 
@@ -223,51 +229,19 @@ footer .contact-info p {
   padding: 0;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
 }
 
 .retro-card .card-image {
-  margin: 3%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  clip-path: inset(3% 3% 3% 3%);
-  width: 94%;
+  width: 100%;
   height: auto;
+  object-fit: contain;
+  margin: 3% 0;
 }
 
 .retro-card .card-content {
   flex: 1;
   padding: 3%;
-}
-
-.cards_row .retro-card {
-  flex-direction: column;
-  align-items: center;
-}
-
-.cards_row .retro-card .card-image {
-  width: 94%;
-  height: auto;
-  margin: 3%;
-}
-
-.cards_row .retro-card .card-content {
-  width: 100%;
-}
-
-.cards_column .retro-card {
-  flex-direction: row;
-  align-items: center;
-}
-
-.cards_column .retro-card .card-image {
-  width: 94%;
-  height: auto;
-  margin: 3%;
-}
-
-.cards_column .retro-card .card-content {
-  width: 100%;
 }
 
 /* FAQ section inherits retro-card styles */
