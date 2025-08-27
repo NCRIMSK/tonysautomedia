@@ -44,10 +44,9 @@ body {
   gap: 20px; /* space between cards */
 }
 
+
 .cards_column .retro-card {
-  display: flex;
   flex-direction: row;
-  width: 100%;
   aspect-ratio: 2 / 1;
   overflow: hidden;
 }
@@ -61,7 +60,6 @@ body {
 }
 
 .cards_column .retro-card .card-content {
-  padding: 3%;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
