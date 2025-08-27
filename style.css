@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --black: #000000;
@@ -17,11 +17,16 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Space Mono", monospace;
   background: var(--black);
   color: var(--cyan);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.fa-solid,
+.fa-brands {
+  color: var(--light-gray);
 }
 
 /* Content blocks */
@@ -294,7 +299,7 @@ footer .contact-info p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 0.9rem;
 }
 
