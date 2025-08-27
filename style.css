@@ -32,43 +32,63 @@ body {
   background-color: var(--black);
   color: var(--cyan);
 }
-.cards_row {
+/* Card layout */
+.cards-row {
   display: flex;
   gap: 20px; /* space between columns */
 }
 
-.cards_column {
+.cards-column {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px; /* space between cards */
 }
 
+/* Card component */
+.card {
+  background: transparent;
+  color: var(--cyan);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 20px 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-.cards_column .retro-card {
+.card-content {
+  flex: 1;
+  padding: 3%;
+}
+
+/* Horizontal card variant */
+.cards-column .card {
   flex-direction: row;
   aspect-ratio: 2 / 1;
   overflow: hidden;
 }
 
-.cards_column .retro-card .card-image {
-  width: 25%;
-  height: 50%;
+.cards-column .card img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   margin: 0;
-  align-self: center;
 }
 
-.cards_column .retro-card .card-content {
+.cards-column .card .card-content {
   line-height: 1.4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;    /* show up to 6 lines */
-  overflow: hidden;         /* extra text is truncated */
+  -webkit-line-clamp: 6; /* show up to 6 lines */
+  overflow: hidden; /* extra text is truncated */
 }
 
 @media (max-width: 600px) {
-  .cards_row {
+  .cards-row {
     flex-direction: column;
   }
 }
@@ -221,34 +241,8 @@ footer .contact-info p {
   }
 }
 
-/* Retro card */
-.retro-card {
-  background: transparent;
-  color: var(--cyan);
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  margin: 20px 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.retro-card .card-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  margin: 3% 0;
-}
-
-.retro-card .card-content {
-  flex: 1;
-  padding: 3%;
-}
-
-/* FAQ section inherits retro-card styles */
-.retro-card.faq {
+/* FAQ card variant */
+.card.faq {
   background: transparent;
 }
 
