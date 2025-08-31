@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Video Production</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
         * {
             margin: 0;
@@ -400,7 +404,13 @@
             <div class="hero-content fade-in">
                 <h1>AI Video Production</h1>
                 <p>Профессиональные видеоролики с искусственным интеллектом. От идеи до готового контента за 24 часа.</p>
-                <button class="cta-button" onclick="scrollToOrder()">Заказать ролик</button>
+                <a
+                  class="cta-button"
+                  href="https://wa.me/972534384116?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+                  target="_blank"
+                  rel="noopener"
+                  >Заказать ролик</a
+                >
             </div>
         </div>
     </section>
@@ -472,10 +482,6 @@
                         <h4>Дополнительный формат</h4>
                         <p>+1500₪ за вертикальное + горизонтальное видео</p>
                     </div>
-
-                   <div id="contact-form">
-                       <iframe class="airtable-embed" src="https://airtable.com/embed/app6xxZBV3HoNgZ1V/pagc0YMK5v8TjLRc6/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-                   </div>
                 </div>
             </div>
         </div>
@@ -486,9 +492,30 @@
         <div class="container">
             <h2 class="fade-in">Готовы создать вирусный контент?</h2>
             <p class="fade-in">Превратите вашу идею в профессиональный видеоролик с помощью ИИ</p>
-            <button class="cta-button fade-in" onclick="orderVideo()">Начать проект</button>
+            <a
+              class="cta-button fade-in"
+              href="https://wa.me/972534384116?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+              target="_blank"
+              rel="noopener"
+              >Начать проект</a
+            >
         </div>
     </section>
+
+    <div class="cta-buttons">
+      <a
+        href="mailto:contentmage@tonysautomedia.com?body=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+        class="retro-button"
+        aria-label="Email"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+      <a
+        href="https://wa.me/972534384116?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE"
+        class="retro-button"
+        aria-label="WhatsApp"
+        ><i class="fa-brands fa-whatsapp"></i
+      ></a>
+    </div>
 
     <footer>
       <p>© 2025 Tony's Automation and Media</p>
@@ -519,19 +546,6 @@
                 
                 particlesContainer.appendChild(particle);
             }
-        }
-
-        // Smooth scroll to pricing
-        function scrollToOrder() {
-            document.getElementById('pricing').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Order button action
-        function orderVideo() {
-            // Here you can add your order logic - redirect to form, open modal, etc.
-            alert('Для заказа ролика свяжитесь с нами:\n\n📞 Телефон: +972-XX-XXX-XXXX\n📧 Email: info@aivideostudio.com\n💬 WhatsApp: +972-XX-XXX-XXXX\n\nМы ответим в течение 1 часа!');
         }
 
         // Intersection Observer for animations
