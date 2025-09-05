@@ -132,11 +132,17 @@ h6 {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
   padding: 10px 20px;
   background: linear-gradient(to bottom, var(--magenta), transparent);
   z-index: 1000;
+  direction: ltr;
+  gap: 10px;
+}
+
+.main-nav .home-link {
+  margin-left: auto;
 }
 
 .nav-btn {
