@@ -521,3 +521,12 @@ footer .contact-info p {
     border-radius: 60% 40% 30% 70% / 60% 50% 40% 30%;
   }
 }
+/* Mobile: scale everything to half size */
+@media (max-width: 600px) {
+  body {
+    transform: scale(0.5);
+    transform-origin: top left;
+    width: 200%;
+    height: 200%;
+  }
+}
