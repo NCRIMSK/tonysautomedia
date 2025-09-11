@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-dropdown .nav-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
+  document.querySelectorAll('.nav-dropdown .nav-link').forEach(link => {
+    link.addEventListener('click', e => {
       e.preventDefault();
-      const dropdown = btn.parentElement;
+      const dropdown = link.parentElement;
+
       dropdown.classList.toggle('open');
     });
   });
