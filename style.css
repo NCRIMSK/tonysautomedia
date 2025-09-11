@@ -224,6 +224,12 @@ h6 {
 
 .nav-btn:hover {
   background-color: var(--cyan);
+  color: var(--black);
+}
+
+.nav-btn:hover .fa-solid,
+.nav-btn:hover .fa-brands {
+  color: var(--black);
 }
 
 /* Video fallback image */
@@ -532,11 +538,24 @@ footer .contact-info p {
 
 .retro-button:hover {
   background-color: var(--cyan);
+  color: var(--black);
+}
+
+.retro-button:hover .fa-solid,
+.retro-button:hover .fa-brands {
+  color: var(--black);
 }
 
 .retro-button:active {
   transform: translateY(0.125rem);
   box-shadow: 0 0.125rem 0 var(--indigo);
+}
+
+.offer-card {
+  background: var(--black);
+  border: 1vw solid;
+  border-image: linear-gradient(var(--light-gray), var(--dark-gray)) 1;
+  padding: 2%;
 }
 
 /* Animated background */
