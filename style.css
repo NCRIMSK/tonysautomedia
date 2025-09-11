@@ -106,15 +106,24 @@ body {
   overflow: visible;
 }
 
+.portfolio-grid,
+.portfolio-grid .pair {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
 @media (pointer: fine) {
-  .portfolio-page .cards-row {
+  .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2%;
   }
 
-  .portfolio-page .cards-column {
-    display: contents;
+  .portfolio-grid .pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
   }
 }
 
