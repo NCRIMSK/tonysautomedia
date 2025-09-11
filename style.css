@@ -219,12 +219,12 @@ h6 {
   text-decoration: none;
   padding: 1% 2%;
   border-radius: 0.25rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-btn:hover {
   background-color: var(--cyan);
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .nav-btn:hover .fa-solid,
