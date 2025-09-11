@@ -14,7 +14,8 @@
 
 .cards-row .card,
 .portfolio-grid .card {
-  width: 100%;
+  width: 90%;
+  margin: 1rem auto;
 }
 
 @media (orientation: landscape) {
@@ -26,6 +27,7 @@
   .cards-row .card,
   .portfolio-grid .card {
     width: 50%;
+    margin: 1rem auto;
   }
 }
 
