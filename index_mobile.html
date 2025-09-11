@@ -18,9 +18,18 @@
   </head>
   <body>
     <header class="main-nav">
-      <a href="taudiomagic.html" class="nav-btn">Audio Magic</a>
-      <a href="https://tonys.lovable.app" class="nav-btn">Automation</a>
-      <a href="portfolio_mobile.html" class="nav-btn">Portfolio</a>
+      <div class="nav-left">
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link">Offers <span class="arrow">&gt;</span></a>
+          <div class="dropdown-content">
+            <a href="taudiomagic.html">Audio Magic</a>
+            <a href="https://tonys.lovabel.app">Automation</a>
+            <a href="aivideooffer.htm">AI Video Offer</a>
+          </div>
+        </div>
+        <a href="portfolio_mobile.html" class="nav-link">Portfolio</a>
+        <a href="aboutme_mobile.html" class="nav-link">About Me</a>
+      </div>
       <a href="index_mobile.html" class="nav-btn home-link">Home</a>
     </header>
     <div class="blob-bg">
@@ -82,14 +91,6 @@
       </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-content">
-        <h3><strong>Who I am?:</strong></h3>
-        I’m a media producer (20+ years) and creative automator (a little less) who blends pro-level audio,
-        visuals, practical automation and AI workflow enhancment. I help creators, startups,
-        and small teams ship more, get better outcome, and publish faster.<br />
-      </div>
-    </div>
     <div class="cta-buttons">
       <a href="aivideooffer.htm#contact-form" class="retro-button" aria-label="Email">
         <i class="fa-solid fa-envelope"></i> Write me an email
@@ -98,6 +99,18 @@
         <i class="fa-brands fa-whatsapp"></i> Write me on WhatsApp
       </a>
     </div>
+    <footer>
+      <p>© Tony's Media and Automation</p>
+      <div class="social-links">
+        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
+        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
+        <a href="https://www.facebook.com/necrozzmsk"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="https://wa.me/972534384116"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.youtube.com/@TonyNeuro"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+      </div>
+    </footer>
+    <script src="nav.js"></script>
     <script>
       const ctaButtons = document.querySelectorAll('.cta-buttons .retro-button');
       function pulseButtons(){

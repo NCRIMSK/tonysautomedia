@@ -6,6 +6,7 @@
   --indigo: #3b00bd;
   --deep-purple: #2b0057;
   --cyan: #00c5e1;
+  --white: #ffffff;
   --light-gray: #d0d0d8;
   --dark-gray: #333333;
 }
@@ -244,8 +245,9 @@ h6 {
   gap: 1%;
 }
 
-.main-nav .home-link {
-  margin-left: auto;
+.main-nav .nav-left {
+  display: flex;
+  gap: 1%;
 }
 
 .nav-btn {
@@ -269,6 +271,60 @@ h6 {
   color: var(--black);
 }
 
+.home-link {
+  margin-left: auto;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: var(--cyan);
+  -webkit-text-stroke: 1px #000;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.nav-dropdown.open .arrow {
+  transform: rotate(90deg);
+}
+
+.nav-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  border: 1px solid var(--black);
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.nav-dropdown.open .dropdown-content {
+  display: flex;
+}
+
+.nav-dropdown .dropdown-content a {
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-dropdown .dropdown-content a:hover {
+  background: #222;
+}
+
 /* Video fallback image */
 .video-fallback {
   display: none;
@@ -283,9 +339,7 @@ footer {
   background: linear-gradient(to top, var(--magenta), transparent);
   padding: 2%;
   color: var(--cyan);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
   direction: ltr;
   position: fixed;
   bottom: 0;
@@ -294,13 +348,33 @@ footer {
   z-index: 1000;
 }
 
-footer .contact-info {
+.social-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #ccc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.social-links a:hover {
+  color: var(--white);
+}
+
+.legal-info {
   color: var(--cyan);
   text-align: right;
   direction: rtl;
 }
 
-footer .contact-info p {
+.legal-info p {
   margin: 0.2% 0;
   line-height: 1.2;
   color: var(--cyan);
