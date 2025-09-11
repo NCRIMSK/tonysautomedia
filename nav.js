@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const dropdown = link.parentElement;
+
       dropdown.classList.toggle('open');
     });
   });

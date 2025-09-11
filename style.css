@@ -251,24 +251,67 @@ h6 {
 }
 
 .nav-btn {
+  background: none;
+  border: 1px solid var(--black);
+  color: var(--black);
+  text-decoration: none;
+  padding: 0.5% 1%;
+  border-radius: 0.25rem;
+}
+
+.nav-btn:hover {
+  background: var(--black);
+  color: var(--white) !important;
+}
+
+.home-link {
   background-color: var(--indigo);
   color: var(--cyan);
-  text-decoration: none;
-  padding: 1% 2%;
-  border-radius: 0.25rem;
+  border: none;
   transition:
     background-color 0.3s,
     color 0.3s;
 }
 
-.nav-btn:hover {
+.home-link:hover {
   background-color: var(--cyan);
   color: var(--black) !important;
 }
 
-.nav-btn:hover .fa-solid,
-.nav-btn:hover .fa-brands {
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--black);
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.nav-dropdown.open .dropdown-content {
+  display: flex;
+}
+
+.nav-dropdown .dropdown-content a {
+  padding: 0.5rem 1rem;
   color: var(--black);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--black);
+}
+
+.nav-dropdown .dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown .dropdown-content a:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 .home-link {
