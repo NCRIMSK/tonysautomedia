@@ -172,8 +172,16 @@ body {
     width: 100%;
     margin-bottom: 1vh;
   }
+  .card,
+  .card iframe {
+    width: 90%;
+    margin: 1rem auto;
+  }
   .card .skills {
-    margin-top: 1vh;
+    margin: 1rem 0;
+  }
+  .portfolio-grid .card {
+    margin-bottom: 1rem;
   }
 }
 
@@ -587,6 +595,11 @@ footer .contact-info p {
   border: 1vw solid;
   border-image: linear-gradient(var(--light-gray), var(--dark-gray)) 1;
   padding: 2%;
+}
+
+.offer-card .final-cta {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /* Animated background */
