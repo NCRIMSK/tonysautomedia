@@ -11,6 +11,10 @@
   --dark-gray: #333333;
 }
 
+html {
+  font-size: 18px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -257,16 +261,19 @@ h6 {
   text-decoration: none;
   padding: 0.5% 1%;
   border-radius: 0.25rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+  -webkit-text-stroke: 2px var(--cyan);
 }
 
 .nav-btn:hover {
   background: var(--black);
-  color: var(--white) !important;
+  color: var(--black) !important;
 }
 
 .home-link {
   background-color: var(--indigo);
-  color: var(--cyan);
+  color: var(--black);
   border: none;
   transition:
     background-color 0.3s,
@@ -319,14 +326,15 @@ h6 {
 }
 
 .nav-link {
-  font-weight: bold;
-  color: var(--cyan);
-  -webkit-text-stroke: 1px #000;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--black);
+  -webkit-text-stroke: 2px var(--cyan);
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--white);
+  color: var(--black);
 }
 
 .nav-dropdown {
