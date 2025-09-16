@@ -16,6 +16,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
     <title>Portfolio - Tony's Media and Automation</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap"
@@ -30,20 +31,22 @@
   </head>
   <body class="portfolio-page">
     <header class="main-nav">
+
       <div class="nav-left">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link">Offers <span class="arrow">&gt;</span></a>
-          <div class="dropdown-content">
+	    <div class="nav-dropdown">
+          <a href="#" class="nav-btn">Offers&nbsp;<span class="arrow">&gt;</span></a>
+          <div class="dropdown-content" class="nav-link">
             <a href="taudiomagic.html">Audio Magic</a>
             <a href="https://tonys.lovabel.app">Automation</a>
             <a href="aivideooffer.htm">AI Video Offer</a>
           </div>
         </div>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="aboutme.html" class="nav-link">About Me</a>
-      </div>
-
-      <a href="index.html" class="nav-btn home-link">Home</a>
+		<a href="portfolio.html" class="nav-btn">Portfolio</a>
+		<a href="aboutme.html" class="nav-btn">About Me</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+	</div>
     </header>
 
     <div class="blob-bg">
@@ -55,6 +58,7 @@
     <header>
       <h1>Portfolio</h1>
       <div class="tagline">Selected works and experiments</div>
+	  <br>
     </header>
 
     <div class="portfolio-grid">
@@ -152,30 +156,96 @@
           </ul>
         </div>
       </div>
+<div class="audio-demo">
+        <h3 class="demo-title">Audio Restoration</h3>
+        <p class="demo-subtitle">Your voice can be clean in any circumstances</p>
+
+        <div class="audio-player-container">
+          <div class="track-buttons">
+            <button class="track-btn active" data-track="fixed">
+                            <span class="track-label">Fixed</span>
+            </button>
+            <button class="track-btn" data-track="original">
+              
+              <span class="track-label">Original</span>
+            </button>
+            
+          </div>
+
+          <div class="audio-player">
+            <div class="player-info">
+              <span class="current-track">Check the difference</span>
+              <span class="track-time">0:00 / 0:00</span>
+            </div>
+
+            <div class="player-controls">
+              <button class="play-pause-btn" id="playPauseBtn">
+                <span class="play-icon">▶️</span>
+              </button>
+
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="volume-container">
+                <span class="volume-icon">🔊</span>
+                <input
+                  type="range"
+                  class="volume-slider"
+                  min="0"
+                  max="100"
+                  value="70"
+                />
+              </div>
+            </div>
+          </div>
+		  </div>
+		  <audio id="audioPlayer" preload="metadata">
+          <source
+            src="My%20fix%20plus%20AI.mp3"
+            type="audio/mpeg"
+            data-track="fixed"
+          />
+          <source src="Original.mp3" type="audio/mpeg" data-track="original" />
+          <source src="Just%20AI.mp3" type="audio/mpeg" data-track="ai" />
+          Your browser does not support the audio element.
+        </audio>
     </div>
+	<div class="card">
+          <h3>Audio Restoration</h3>
+          <ul class="skills">
+            <li>Raw Footage Clean-up</li>
+            <li>background remove</li>
+            <li>Balance</li>
+            <li>Loudness Correction</li>
+            <li>Archival footage restoration</li>
+            </ul>
+        </div>
 
     <div class="cta-buttons">
       <a
-        href="aivideooffer.htm#contact-form"
+        href="contentmage@tonysautomedia.com"
         class="retro-button"
-        aria-label="Contact Form"
+        aria-label="Email"
       >
         <i class="fa-solid fa-envelope"></i>
       </a>
       <a
-        href="aivideooffer.htm#contact-form"
+        href="wa.me/972534384116"
         class="retro-button"
-        aria-label="Contact Form"
+        aria-label="WhatsApp"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
-    </div>
-
+    </div>>
+<br><br><br>
     <footer>
-      <p>© Tony's Media and Automation</p>
       <div class="social-links">
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
+	    <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
+		<a href="contentmage@tonysautomedia.com"><i class="fa-solid fa-envelope"></i> Email</a>
+		<a href="https://linktr.ee/tonyzachesov"><i class="fa-brands fa-linktree"></i></i> Linktree</a>
         <a href="https://www.facebook.com/necrozzmsk"><i class="fa-brands fa-facebook"></i> Facebook</a>
         <a href="https://wa.me/972534384116"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="https://www.youtube.com/@TonyNeuro"><i class="fa-brands fa-youtube"></i> YouTube</a>

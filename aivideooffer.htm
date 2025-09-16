@@ -26,61 +26,28 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      .features-grid {
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-      .feature-card {
-        background: transparent;
-        padding: 1rem;
-      }
-      .section-title {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      .pricing-card {
-        text-align: center;
-      }
-      .price {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      .pricing-features {
-        list-style: none;
-        padding-left: 0;
-      }
-      .pricing-features li {
-        margin-bottom: 0.5rem;
-      }
-      .final-cta {
-        text-align: center;
-      }
-    </style>
+
   </head>
   <body>
     <header class="main-nav">
+
       <div class="nav-left">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link">Offers <span class="arrow">&gt;</span></a>
-          <div class="dropdown-content">
+	    <div class="nav-dropdown">
+          <a href="#" class="nav-btn">Offers&nbsp;<span class="arrow">&gt;</span></a>
+          <div class="dropdown-content" class="nav-link">
             <a href="taudiomagic.html">Audio Magic</a>
             <a href="https://tonys.lovabel.app">Automation</a>
             <a href="aivideooffer.htm">AI Video Offer</a>
           </div>
         </div>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="aboutme.html" class="nav-link">About Me</a>
-      </div>
-
-      <a href="index.html" class="nav-btn home-link">Home</a>
+		<a href="portfolio.html" class="nav-btn">Portfolio</a>
+		<a href="aboutme.html" class="nav-btn">About Me</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+	</div>
     </header>
+
     <div class="blob-bg">
       <div class="blob"></div>
       <div class="blob"></div>
@@ -89,12 +56,15 @@
     <header>
       <h1>AI Video Production</h1>
       <div class="tagline">
-        Professional videos generated with AI in 24 hours
+        Get a pro-grade <strong>AI Commercial</strong>
       </div>
-    </header>
+	  <div class="tagline">
+        <strong>You'll get:</strong>
+      </div>
+	  <br>
+	</header>
     <section class="features container">
-      <h2 class="section-title">What's Included</h2>
-      <div class="features-grid">
+       <div class="features-grid">
         <div class="feature-card">
           <h3>Video Generation</h3>
           <p>
@@ -129,65 +99,71 @@
           </p>
         </div>
         <div class="feature-card">
-          <h3>Three Revisions</h3>
+          <h3>Two Revisions</h3>
           <p>
-            Two video revisions and one audio revision to achieve perfection.
+            Two video revisions included to achieve perfection.
           </p>
         </div>
       </div>
     </section>
     <section class="offer container" id="contact-form">
       <div class="offer-card">
-        <h2 class="section-title">Price</h2>
+        <h2 class="section-title">Offer</h2>
         <div class="pricing-card">
-          <div class="price">2000₪</div>
-          <p>Per one video format</p>
-          <ul class="pricing-features">
-            <li>Video up to 1 minute</li>
-            <li>Any format: horizontal, vertical, 1×1, 4×5</li>
-            <li>Full production cycle</li>
+          <div class="price">500$</div>
+          <strong>Per 30 second video</strong>
+		  <ul class="pricing-features">
+		  <br>
+            <li>Any ONE format: portrait/landscape/square</li>
+            <li><strong>Full production cycle:</strong></li>
             <li>AI generation + computer graphics</li>
-            <li>Professional voice-over</li>
-            <li>Sound design and music</li>
-            <li>3 revisions included</li>
+            <li>One consistent charachter/object</li>
+            <li>Voice-over, sound design and music</li>
+			<li>Color-grade and clean-up</li>
+            <li>2 revisions included</li>
           </ul>
+		  <br>
           <div class="additional-option">
-            <h4>Additional format</h4>
-            <p>+1500₪ for vertical + horizontal video</p>
+            <h3>Additional options</h3>
+			<p>+300$ one more video format</p>
+			<p>+250$ additional revision</p>
           </div>
         </div>
         <div class="final-cta">
-          <h2>Ready to create viral content?</h2>
-          <p>Turn your idea into a professional video with AI</p>
+          <h2>Ready to raise your income?</h2>
+          
+		  <br>
           <a
             class="retro-button"
             href="https://wa.me/972534384116?text=Hello!%20I%20want%20to%20order%20a%20video"
             target="_blank"
             rel="noopener"
-            >Contact me</a
-          >
+            >Contact me</a>
+			
         </div>
       </div>
     </section>
     <div class="cta-buttons">
       <a
-        href="mailto:contentmage@tonysautomedia.com?body=Hello!%20I%20want%20to%20order%20a%20video"
+        href="contentmage@tonysautomedia.com"
         class="retro-button"
         aria-label="Email"
-        ><i class="fa-solid fa-envelope"></i
-      ></a>
+      >
+        <i class="fa-solid fa-envelope"></i>
+      </a>
       <a
-        href="https://wa.me/972534384116?text=Hello!%20I%20want%20to%20order%20a%20video"
+        href="wa.me/972534384116"
         class="retro-button"
         aria-label="WhatsApp"
-        ><i class="fa-brands fa-whatsapp"></i
-      ></a>
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
     </div>
     <footer>
-      <p>© Tony's Media and Automation</p>
       <div class="social-links">
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
+	    <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
+		<a href="contentmage@tonysautomedia.com"><i class="fa-solid fa-envelope"></i> Email</a>
+		<a href="https://linktr.ee/tonyzachesov"><i class="fa-brands fa-linktree"></i></i> Linktree</a>
         <a href="https://www.facebook.com/necrozzmsk"><i class="fa-brands fa-facebook"></i> Facebook</a>
         <a href="https://wa.me/972534384116"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="https://www.youtube.com/@TonyNeuro"><i class="fa-brands fa-youtube"></i> YouTube</a>

@@ -30,21 +30,24 @@
   </head>
   <body>
     <header class="main-nav">
+
       <div class="nav-left">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link">Offers <span class="arrow">&gt;</span></a>
-          <div class="dropdown-content">
+	    <div class="nav-dropdown">
+          <a href="#" class="nav-btn">Offers&nbsp;<span class="arrow">&gt;</span></a>
+          <div class="dropdown-content" class="nav-link">
             <a href="taudiomagic.html">Audio Magic</a>
             <a href="https://tonys.lovabel.app">Automation</a>
             <a href="aivideooffer.htm">AI Video Offer</a>
           </div>
         </div>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="aboutme.html" class="nav-link">About Me</a>
-      </div>
-
-      <a href="index.html" class="nav-btn home-link">Home</a>
+		<a href="portfolio.html" class="nav-btn">Portfolio</a>
+		<a href="aboutme.html" class="nav-btn">About Me</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+	</div>
     </header>
+
     <!-- Animated Background -->
     <div class="blob-bg">
       <div class="blob"></div>
@@ -53,9 +56,9 @@
     </div>
 
     <header>
-      <h1>Tony's Audio Magic</h1>
+      <h1>Audio Post Production</h1>
       <div class="tagline">
-        From Sound to Impact — Let Your Video <strong>Be Heard</strong>
+        Let Your Ads <strong>Be Heard</strong>
       </div>
       <div class="sound-waves">
         <div class="sound-wave"></div>
@@ -68,126 +71,87 @@
       </div>
     </header>
 
-    <div class="card">
-      <p>Great ideas survive shaky video—bad audio kills them.</p>
-      <p>
-        When sound is right, people relax, trust you more, and stay to the end.
-      </p>
-      <p>
-        Hi, I’m Tony. I make voices feel close, clear, and effortless to hear.
-      </p>
-      <p>
-        I’m the calm pair of ears that polishes the space around your words - so
-        your message lands clean, warm, and true. Not louder. Better.
-      </p>
-      <p>If your story matters, let the sound carry it.</p>
-      <p>Friendly, responsive, human.</p>
-    </div>
-
-    <div class="card">
-      <h2>What I Do for You</h2>
-      <ul>
-        <li>Make voices sound clear and crisp</li>
-        <li>Add the right background sounds and effects</li>
-        <li>Pick music that fits your vibe — or create custom sounds</li>
-        <li>Mix everything so it sounds great on any platform</li>
-      </ul>
-
-      <div class="audio-demo">
-        <h3 class="demo-title">The Difference</h3>
-        <p class="demo-subtitle">Hear the transformation in your audio</p>
-
-        <div class="audio-player-container">
-          <div class="track-buttons">
-            <button class="track-btn active" data-track="fixed">
-              <span class="track-icon">✨</span>
-              <span class="track-label">My Fix + AI</span>
-            </button>
-            <button class="track-btn" data-track="original">
-              <span class="track-icon">🎵</span>
-              <span class="track-label">Original</span>
-            </button>
-            <button class="track-btn" data-track="ai">
-              <span class="track-icon">🤖</span>
-              <span class="track-label">Just AI</span>
-            </button>
-          </div>
-
-          <div class="audio-player">
-            <div class="player-info">
-              <span class="current-track">My Fix + AI Magic</span>
-              <span class="track-time">0:00 / 0:00</span>
-            </div>
-
-            <div class="player-controls">
-              <button class="play-pause-btn" id="playPauseBtn">
-                <span class="play-icon">▶️</span>
-              </button>
-
-              <div class="progress-container">
-                <div class="progress-bar">
-                  <div class="progress-fill"></div>
-                </div>
-              </div>
-
-              <div class="volume-container">
-                <span class="volume-icon">🔊</span>
-                <input
-                  type="range"
-                  class="volume-slider"
-                  min="0"
-                  max="100"
-                  value="70"
-                />
-              </div>
-            </div>
+    <section class="features container">
+       <div class="features-grid">
+        <div class="feature-card">
+          <h3>Sound Design</h3>
+          <p>
+            Great ideas survive shaky video — bad audio kills them. When sound is right, people relax, trust you more, and stay to the end.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Voice-over</h3>
+          <p>
+          Clean and clear voice without annoyng noises is more convincing and comforting.   
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Music</h3>
+          <p>
+          Control the vibe and emotions with carefully picked soundtrack
+          </p>
+        </div>
+		<div class="feature-card">
+          <h3>Mixing and mastering</h3>
+          <p>
+          Balance is an important part of the process as well as broadcasting standarts. 
+          </p>
+        </div>
+		<div class="feature-card">
+          <h3>Fast Delivery</h3>
+          <p>
+          My sound workflow exists for more than 20 years, and it is fine tuned - there are no room for overthinking. 
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Two Revisions</h3>
+          <p>
+            Two revisions included to achieve perfection.
+          </p>
+        </div>
+      </div>
+    </section>
+	
+ 
+    
+    <section class="offer container" id="contact-form">
+      <div class="offer-card">
+        <h2 class="section-title">Price</h2>
+        <div class="pricing-card">
+          <div class="price">300$</div>
+          <strong>up to 2 min video</strong>
+		  <ul class="pricing-features">
+		  <br>
+            <li>Lossless sound + additonal broadcasting formats</li>
+            <li>Full post-production cycle:</li>
+            <li>Cleaning and restoration of your footage</li>
+            <li>Voice-over, sound design and music </li>
+            <li>Blance, mixing and mastering</li>
+            <li>2 revisions included</li>
+          </ul>
+          <div class="additional-option">
+            <h4>Additional options</h4>
+            <p>+100$ one more video format</p>
+			<p>+200$ 24 Hour Delivery</p>
           </div>
         </div>
-
-        <audio id="audioPlayer" preload="metadata">
-          <source
-            src="My%20fix%20plus%20AI.mp3"
-            type="audio/mpeg"
-            data-track="fixed"
-          />
-          <source src="Original.mp3" type="audio/mpeg" data-track="original" />
-          <source src="Just%20AI.mp3" type="audio/mpeg" data-track="ai" />
-          Your browser does not support the audio element.
-        </audio>
+        <div class="final-cta">
+          <h2>Ready to impress your leads with pro-grade sound?</h2>
+          <p>Let's make </p>
+		  <br>
+          <a
+            class="retro-button"
+            href="https://wa.me/972534384116?text=Hello!%20I%20want%20to%20order%20an%20audio%20production!"
+            target="_blank"
+            rel="noopener"
+            >Contact me</a>
+			
+        </div>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>📦 What You Get</h2>
-      <ul>
-        <li>Final audio or video file ready to use</li>
-        <li>Clean, clear sound that fits your style and volume needs</li>
-        <li>Fast delivery and easy feedback process</li>
-      </ul>
-    </div>
-
-    <div class="card offer-card">
-      <h2>I'll fix any voice record</h2>
-      <p>10$ every minute. Any format. Any output. Pro grade.</p>
-      <div class="final-cta">
-        <a href="aivideooffer.htm#contact-form" class="retro-button">Contact me</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>💬 Why Me?</h2>
-      <p>
-        I don't rely on presets — I actually <strong>listen</strong> and make
-        every sound work perfectly. You'll hear the difference.
-      </p>
-      <p>
-        🎙️ Got a short clip? Send it over and I'll show you what's possible — no
-        strings.
-      </p>
-    </div>
-
-    <div class="card faq">
-      <h2>❓ FAQs</h2>
+    </section>
+	<h2>FAQs</h2>
+	<div class="card faq">
+      
       <div class="question">What kind of videos do you work with?</div>
       <p>
         I work with everything from short social media clips (Reels, TikToks) to
@@ -203,32 +167,19 @@
       </p>
     </div>
 
-    <div class="video-placeholder">
-      <div class="video-wrapper">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/MNo0lYVspU0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-
-        <div class="video-fallback">
-          <div class="video-thumbnail" onclick="openVideo()">
-            <img
-              src="https://img.youtube.com/vi/MNo0lYVspU0/maxresdefault.jpg"
-              alt="Video Thumbnail"
-              class="video-thumb"
-            />
-            <div class="play-overlay">
-              <div class="play-button">▶️</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="cta-buttons">
+      <a
+        href="mailto:contentmage@tonysautomedia.com?body=Hello!%20I%20want%20to%20order%20a%20video"
+        class="retro-button"
+        aria-label="Email"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+      <a
+        href="https://wa.me/972534384116?text=Hello!%20I%20want%20to%20order%20a%20video"
+        class="retro-button"
+        aria-label="WhatsApp"
+        ><i class="fa-brands fa-whatsapp"></i
+      ></a>
     </div>
 
     <div class="cta-buttons">
@@ -249,10 +200,10 @@
     </div>
 
     <footer>
-      <p>© Tony's Media and Automation</p>
       <div class="social-links">
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
-        <a href="https://linktr.ee/tonyzachesov"><i class="fa-solid fa-link"></i> Linktree</a>
+	    <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
+		<a href="contentmage@tonysautomedia.com"><i class="fa-solid fa-envelope"></i> Email</a>
+		<a href="https://linktr.ee/tonyzachesov"><i class="fa-brands fa-linktree"></i></i> Linktree</a>
         <a href="https://www.facebook.com/necrozzmsk"><i class="fa-brands fa-facebook"></i> Facebook</a>
         <a href="https://wa.me/972534384116"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="https://www.youtube.com/@TonyNeuro"><i class="fa-brands fa-youtube"></i> YouTube</a>

@@ -11,8 +11,14 @@
   --dark-gray: #333333;
 }
 
+:focus-visible { /* CHANGED from :focus */
+  outline: 2px solid var(--magenta); /* better contrast */
+  outline-offset: 2px;
+}
+
 html {
-  font-size: 18px;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 * {
@@ -25,8 +31,8 @@ body {
   font-family: "Space Mono", monospace;
   background: var(--black);
   color: var(--cyan);
-  padding-top: 6vh;
-  padding-bottom: 6vh;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -42,20 +48,22 @@ body {
 .faq,
 .wrap {
   background-color: var(--black);
-  color: var(--cyan);
+  color: inherit;);
 }
 /* Card layout */
 
 .cards-row {
   display: flex;
-  gap: 2%; /* space between columns */
+  align-items: stretch;
+  gap: 0.25rem; /* space between columns */
 }
 
 .cards-column {
   flex: 1;
   display: flex;
+  align-items: stretch;
   flex-direction: column;
-  gap: 2%; /* space between cards */
+  gap: 0.25rem; /* space between cards */
 }
 
 /* Card component */
@@ -65,7 +73,7 @@ body {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  margin: 2% 0;
+  margin: 0.25rem 0.25rem;
   padding: 0;
   width: 100%;
   display: flex;
@@ -74,7 +82,7 @@ body {
 
 .card-content {
   flex: 1;
-  padding: 3%;
+  padding: 0.25rem;
 }
 
 .card iframe {
@@ -99,15 +107,15 @@ body {
 
 .cards-column .card .card-content {
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6; /* show up to 6 lines */
-  overflow: hidden; /* extra text is truncated */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 /* Portfolio page adjustments */
 .portfolio-page .card {
   flex-direction: column;
+  padding-left: 1rem;
   overflow: visible;
 }
 
@@ -115,7 +123,7 @@ body {
 .portfolio-grid .pair {
   display: flex;
   flex-direction: column;
-  gap: 2%;
+  gap: 0.25rem;
 }
 
 @media (pointer: fine) {
@@ -183,7 +191,7 @@ body {
     margin: 1rem auto;
   }
   .card .skills {
-    margin: 1rem 0;
+    margin: 1rem 1rem;
   }
   .portfolio-grid .card {
     margin-bottom: 1rem;
@@ -240,140 +248,93 @@ h6 {
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1% 2%;
+  font-weight: bolder;
+  align-items: stretch;
+  padding: 1rem 2rem;
   background: linear-gradient(to bottom, var(--magenta), transparent);
   z-index: 1000;
-  direction: ltr;
-  gap: 1%;
+  white-space: nowrap; 
+  flex-shrink: 0;
+  gap: 1rem;
 }
 
-.main-nav .nav-left {
+.nav-left {
   display: flex;
-  gap: 1%;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
 }
 
 .nav-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 1700;
+  font-size: 1.2rem;
   background: none;
-  border: 1px solid var(--black);
   color: var(--black);
   text-decoration: none;
-  padding: 0.5% 1%;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  font-weight: 900;
-  font-size: 1.2rem;
-  -webkit-text-stroke: 2px var(--cyan);
+  text-shadow: 
+    -1px -1px 0 var(--cyan),
+     1px -1px 0 var(--cyan),
+    -1px  1px 0 var(--cyan),
+     1px  1px 0 var(--cyan);
+  transition: color 1s;
 }
 
 .nav-btn:hover {
-  background: var(--black);
-  color: var(--black) !important;
+  color: var(--white);
 }
 
-.home-link {
-  background-color: var(--indigo);
-  color: var(--black);
-  border: none;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-.home-link:hover {
-  background-color: var(--cyan);
-  color: var(--black) !important;
-}
-
+/* Dropdown */
 .nav-dropdown {
   position: relative;
 }
 
-.nav-dropdown .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--white);
-  border: 1px solid var(--black);
+  background: var(--black);
+  border: 1px solid var(--deep-purple);
   flex-direction: column;
-  z-index: 1000;
+  z-index: 1001;
+  min-width: 150px;
 }
 
-.nav-dropdown.open .dropdown-content {
+.nav-dropdown:hover .dropdown-content {
   display: flex;
 }
 
-.nav-dropdown .dropdown-content a {
+.dropdown-content a {
   padding: 0.5rem 1rem;
-  color: var(--black);
+  color: var(--cyan);
   text-decoration: none;
   white-space: nowrap;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--deep-purple);
 }
 
-.nav-dropdown .dropdown-content a:last-child {
+.dropdown-content a:last-child {
   border-bottom: none;
 }
 
-.nav-dropdown .dropdown-content a:hover {
-  background: var(--black);
-  color: var(--white);
+.dropdown-content a:hover {
+  background: var(--deep-purple);
 }
 
-.home-link {
-  margin-left: auto;
-}
-
-.nav-link {
-  font-weight: 900;
-  font-size: 1.2rem;
-  color: var(--black);
-  -webkit-text-stroke: 2px var(--cyan);
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--black);
-}
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown .arrow {
+.arrow {
   display: inline-block;
   transition: transform 0.3s;
 }
 
-.nav-dropdown.open .arrow {
+.nav-dropdown:hover .arrow {
   transform: rotate(90deg);
-}
-
-.nav-dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #000;
-  border: 1px solid var(--black);
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.nav-dropdown.open .dropdown-content {
-  display: flex;
-}
-
-.nav-dropdown .dropdown-content a {
-  padding: 0.5rem 1rem;
-  color: var(--white);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.nav-dropdown .dropdown-content a:hover {
-  background: #222;
 }
 
 /* Video fallback image */
@@ -452,7 +413,7 @@ footer {
 }
 
 .sound-wave {
-  width: 0.25rem;
+  width: flex;
   background: var(--magenta);
   animation: wave 1s infinite ease-in-out;
 }
@@ -570,6 +531,42 @@ footer {
   border-radius: 0.2rem;
   overflow: hidden;
 }
+
+.container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+.features-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+.feature-card {
+        background: transparent;
+        padding: 1rem;
+      }
+.section-title {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+.pricing-card {
+        text-align: center;
+      }
+.price {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+.pricing-features {
+        list-style: none;
+        padding-left: 0;
+      }
+.pricing-features li {
+        margin-bottom: 0.5rem;
+      }
+.final-cta {
+        text-align: center;
+      }
 
 .progress-fill {
   width: 0;
@@ -692,6 +689,7 @@ footer {
   color: var(--cyan);
   text-decoration: none;
   padding: 1.5% 2.5%;
+  margin-top: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 0.25rem 0 var(--indigo);
   transition:
