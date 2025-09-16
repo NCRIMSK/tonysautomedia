@@ -3,8 +3,10 @@
                    window.matchMedia('(max-width: 768px)').matches;
   if (!isMobile) return;
   const path = window.location.pathname;
+  if (!/\.(?:html?|htm)$/i.test(path)) return;
   if (path.includes('_mobile')) return;
   const mobilePath = path.replace(/(\.html?|\.htm)$/i, '_mobile$1');
+  if (mobilePath === path) return;
   fetch(mobilePath, { method: 'HEAD' }).then(function(resp) {
     if (resp.ok) {
       window.location.replace(mobilePath);
