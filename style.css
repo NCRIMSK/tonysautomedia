@@ -540,6 +540,7 @@ footer {
 .features-grid {
         display: grid;
         gap: 2rem;
+        grid: auto-flow dense; grid-row-gap: 1rem;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
 .feature-card {
