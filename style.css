@@ -140,7 +140,7 @@ body {
   }
 }
 
-@media (pointer: coarse) {
+@media (max-width: 768px) {
   h1,
   h2,
   h3,
@@ -170,9 +170,13 @@ body {
     transform: translateX(-50%);
     flex-direction: row;
   }
+  .cta-buttons .retro-button {
+    width: 10vmin;
+    height: 10vmin;
+  }
 }
 
-@media (pointer: coarse) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) {
   .cards-row {
     flex-direction: column;
   }
@@ -198,7 +202,7 @@ body {
   }
 }
 
-@media (pointer: coarse) and (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
   .cards-row {
     flex-direction: row;
   }
