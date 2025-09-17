@@ -163,10 +163,12 @@ body {
     display: none;
   }
   .cta-buttons {
+    top: auto;
     bottom: 2vh;
-    left: 50%;
     right: auto;
+    left: 50%;
     transform: translateX(-50%);
+    flex-direction: row;
     gap: 1.25rem;
   }
   .cta-buttons .retro-button {
@@ -641,11 +643,14 @@ footer {
 /* Call to action */
 .cta-buttons {
   position: fixed;
-  bottom: 3vh;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  right: 2rem;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   margin: 0;
   z-index: 1000;
