@@ -30,22 +30,36 @@
   </head>
   <body>
     <header class="main-nav">
-
-      <div class="nav-left">
-            <div class="nav-dropdown">
-          <a href="#" class="nav-btn">Offers <span class="arrow">&gt;</span></a>
-          <div class="dropdown-content" class="nav-link">
-            <a href="taudiomagic.html">Audio Post-</a>
-            <a href="https://tonys.lovabel.app">Automation</a>
-            <a href="aivideooffer.htm">AI Video Offer</a>
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-navigation" class="nav-menu">
+        <div class="nav-left">
+          <div class="nav-dropdown">
+            <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
+              >Offers <span class="arrow">&gt;</span></a
+            >
+            <div class="dropdown-content">
+              <a href="taudiomagic.html">Audio Post-</a>
+              <a href="https://tonys.lovabel.app">Automation</a>
+              <a href="aivideooffer.htm">AI Video Offer</a>
+            </div>
           </div>
+          <a href="portfolio.html" class="nav-btn">Portfolio</a>
+          <a href="aboutme.html" class="nav-btn">About Me</a>
         </div>
-                <a href="portfolio.html" class="nav-btn">Portfolio</a>
-                <a href="aboutme.html" class="nav-btn">About Me</a>
-    </div>
-    <div class="nav-right">
-      <a href="index.html" class="nav-btn">Home</a>
+        <div class="nav-right">
+          <a href="index.html" class="nav-btn">Home</a>
         </div>
+      </nav>
     </header>
 
     <!-- Animated Background -->
