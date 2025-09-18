@@ -162,20 +162,6 @@ body {
   footer {
     display: none;
   }
-  .cta-buttons {
-    top: auto;
-    bottom: 2vh;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: row;
-    gap: 1.25rem;
-  }
-  .cta-buttons .retro-button {
-    width: clamp(4rem, 18vmin, 5.75rem);
-    height: clamp(4rem, 18vmin, 5.75rem);
-    font-size: clamp(1.5rem, 4vmin, 2rem);
-  }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -820,6 +806,25 @@ footer {
 
 .cta-buttons .retro-button.pulse {
   animation: button-pulse 10s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    top: auto;
+    bottom: 2vh;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .cta-buttons .retro-button {
+    width: clamp(4rem, 18vmin, 5.75rem);
+    height: clamp(4rem, 18vmin, 5.75rem);
+    font-size: clamp(1.5rem, 4vmin, 2rem);
+  }
 }
 
 @keyframes button-pulse {
