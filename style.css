@@ -41,6 +41,18 @@ body {
   align-items: stretch;
 }
 
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-lang .nav-btn {
+  font-size: 1rem;
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
 body > * {
   flex-shrink: 0;
 }
@@ -397,6 +409,70 @@ h6 {
 .arrow {
   display: inline-block;
   transition: transform 0.3s;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-menu {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-left,
+html[dir="rtl"] .nav-right,
+html[dir="rtl"] .nav-lang {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-right {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .nav-lang {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .cards-row {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cards-column .card {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .portfolio-grid .pair {
+  direction: rtl;
+}
+
+html[dir="rtl"] .arrow {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] ul,
+html[dir="rtl"] ol,
+html[dir="rtl"] li {
+  text-align: inherit;
 }
 
 .nav-dropdown:hover .arrow,
