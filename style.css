@@ -1110,3 +1110,41 @@ footer {
     border-radius: 60% 40% 30% 70% / 60% 50% 40% 30%;
   }
 }
+
+.voice-cleanup-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.voice-cleanup-grid .offer-card {
+  width: min(100%, 40rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.voice-cleanup-page .section-title {
+  margin-bottom: 0;
+}
+
+.voice-cleanup-page .audio-player-container,
+.voice-cleanup-page .audio-player {
+  width: 100%;
+}
+
+.voice-cleanup-page .form-embed iframe {
+  width: 100%;
+  min-height: 35rem;
+  border: none;
+  background: var(--black);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .voice-cleanup-page .form-embed iframe {
+    min-height: 28rem;
+  }
+}
