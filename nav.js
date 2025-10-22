@@ -4,6 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
   const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
 
+  const offerMenus = document.querySelectorAll('.dropdown-content');
+  offerMenus.forEach(menu => {
+    if (!menu.querySelector('a[href="voicecleanupoffer.html"]')) {
+      const voiceLink = document.createElement('a');
+      voiceLink.href = 'voicecleanupoffer.html';
+      voiceLink.textContent = 'Voice Clean Up';
+      menu.appendChild(voiceLink);
+    }
+  });
+
   const closeDropdown = dropdown => {
     dropdown.classList.remove('open');
     const trigger = dropdown.querySelector('.nav-btn');
