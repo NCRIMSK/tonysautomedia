@@ -4,13 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
   const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
 
+  const language = document.documentElement.lang || 'en';
+  const voiceLinkLabels = {
+    he: 'ניקוי קול',
+    ru: 'Очистка голоса',
+  };
+  const voiceLinkText = voiceLinkLabels[language] || 'Voice Clean Up';
+  const isVoiceCleanupPage = /voicecleanupoffer\.html$/i.test(
+    window.location.pathname,
+  );
+
   const offerMenus = document.querySelectorAll('.dropdown-content');
   offerMenus.forEach(menu => {
-    if (!menu.querySelector('a[href="voicecleanupoffer.html"]')) {
-      const voiceLink = document.createElement('a');
+    let voiceLink = menu.querySelector('[data-offer="voice-cleanup"]');
+    if (!voiceLink) {
+      voiceLink = document.createElement('a');
       voiceLink.href = 'voicecleanupoffer.html';
-      voiceLink.textContent = 'Voice Clean Up';
+      voiceLink.dataset.offer = 'voice-cleanup';
+      voiceLink.textContent = voiceLinkText;
       menu.appendChild(voiceLink);
+    } else if (!voiceLink.textContent.trim()) {
+      voiceLink.textContent = voiceLinkText;
+    }
+
+    if (isVoiceCleanupPage && !voiceLink.hasAttribute('aria-current')) {
+      voiceLink.setAttribute('aria-current', 'page');
     }
   });
 

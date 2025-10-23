@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="he" dir="rtl">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -17,7 +17,7 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voice Clean Up Offer</title>
+    <title>הצעת ניקוי קול</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -26,7 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body class="voice-cleanup-page">
     <header class="main-nav">
@@ -34,9 +34,9 @@
         class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
-        aria-label="Toggle navigation"
+        aria-label="פתיחת תפריט"
       >
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">תפריט</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -45,28 +45,28 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Offers&nbsp;<span class="arrow">&gt;</span></a
+              >שירותים&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="https://tonys.lovabel.app">Automation</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">פוסט אודיו</a>
+              <a href="https://tonys.lovabel.app">אוטומציה</a>
+              <a href="aivideooffer.html">וידאו AI</a>
               <a
                 href="voicecleanupoffer.html"
                 aria-current="page"
                 data-offer="voice-cleanup"
-                >Voice Clean Up</a
+                >ניקוי קול</a
               >
             </div>
           </div>
-          <a href="portfolio.html" class="nav-btn">Portfolio</a>
-          <a href="aboutme.html" class="nav-btn">About Me</a>
+          <a href="portfolio.html" class="nav-btn">תיק עבודות</a>
+          <a href="aboutme.html" class="nav-btn">עליי</a>
         </div>
         <div class="nav-right">
-          <a href="index.html" class="nav-btn">Home</a>
+          <a href="index.html" class="nav-btn">בית</a>
           <div class="nav-lang">
-            <a href="he/voicecleanupoffer.html" class="nav-btn" lang="he">he</a>
-            <a href="ru/voicecleanupoffer.html" class="nav-btn" lang="ru">ru</a>
+            <a href="../voicecleanupoffer.html" class="nav-btn" lang="en">en</a>
+            <a href="../ru/voicecleanupoffer.html" class="nav-btn" lang="ru">ru</a>
           </div>
         </div>
       </nav>
@@ -80,31 +80,30 @@
       </div>
 
       <header>
-        <h1>Voice Clean Up Offer</h1>
-        <div class="tagline">Restore clarity, keep the soul of your voice</div>
+        <h1>הצעת ניקוי קול</h1>
+        <div class="tagline">להחזיר את הצלילות, לשמור על הנשמה של הקול שלך</div>
       </header>
 
       <section class="voice-cleanup container">
         <div class="voice-cleanup-grid">
           <div class="offer-card audio-card">
-            <h2 class="section-title">Hear the Difference</h2>
+            <h2 class="section-title">תשמעו את ההבדל</h2>
             <p>
-              Switch between the original recording and my AI-assisted cleanup to
-              hear how much noise and harshness can be removed while keeping the
-              performance intact.
+              עברו בין ההקלטה המקורית לניקוי בעזרת ה-AI שלי כדי לשמוע כמה
+              רעש וחדות אפשר להסיר ועדיין לשמור על הביצוע האמיתי.
             </p>
             <div class="audio-player-container">
               <div class="track-buttons">
                 <button class="track-btn active" data-track="ai">
-                  <span class="track-label">AI Clean</span>
+                  <span class="track-label">ניקוי AI</span>
                 </button>
                 <button class="track-btn" data-track="original">
-                  <span class="track-label">Original</span>
+                  <span class="track-label">מקורית</span>
                 </button>
               </div>
               <div class="audio-player">
                 <div class="player-info">
-                  <span class="current-track">AI Clean</span>
+                  <span class="current-track">ניקוי AI</span>
                   <span class="track-time">0:00 / 0:00</span>
                 </div>
                 <div class="player-controls">
@@ -131,24 +130,24 @@
             </div>
             <audio id="voiceCleanupPlayer" preload="metadata">
               <source
-                src="Just%20AI.mp3"
+                src="../Just%20AI.mp3"
                 type="audio/mpeg"
                 data-track="ai"
               />
               <source
-                src="Original.mp3"
+                src="../Original.mp3"
                 type="audio/mpeg"
                 data-track="original"
               />
-              Your browser does not support the audio element.
+              הדפדפן שלך לא תומך באלמנט האודיו.
             </audio>
           </div>
 
           <div class="offer-card form-card">
-            <h2 class="section-title">Start Your Cleanup</h2>
+            <h2 class="section-title">התחילו את הניקוי</h2>
             <p>
-              Tell me about your project and I'll follow up with a tailored plan
-              for delivering pristine voice tracks.
+              ספרו לי על הפרויקט ואחזור אליכם עם תוכנית מותאמת למסירת רצועות
+              קול נקיות.
             </p>
             <div class="form-embed">
               <iframe
@@ -170,11 +169,15 @@
       <a
         href="mailto:contentmage@tonysautomedia.com"
         class="retro-button"
-        aria-label="Email"
+        aria-label="אימייל"
       >
         <i class="fa-solid fa-envelope"></i>
       </a>
-      <a href="https://wa.me/972534384116" class="retro-button" aria-label="WhatsApp">
+      <a
+        href="https://wa.me/972534384116"
+        class="retro-button"
+        aria-label="וואטסאפ"
+      >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
     </div>
@@ -208,7 +211,7 @@
       </div>
     </footer>
 
-    <script src="nav.js"></script>
+    <script src="../nav.js"></script>
     <script>
       const voiceCleanupPlayer = document.getElementById("voiceCleanupPlayer");
       const voicePlayPauseBtn = document.getElementById("voiceCleanupPlayPause");
@@ -229,8 +232,8 @@
       );
 
       const voiceTracks = {
-        ai: "Just%20AI.mp3",
-        original: "Original.mp3",
+        ai: "../Just%20AI.mp3",
+        original: "../Original.mp3",
       };
 
       function formatVoiceTime(sec) {
@@ -289,7 +292,7 @@
         voiceCleanupPlayer.volume = voiceVolumeSlider.value / 100;
       });
 
-      loadVoiceTrack("ai", "AI Clean");
+      loadVoiceTrack("ai", "ניקוי AI");
     </script>
     <script>
       const ctaButtons = document.querySelectorAll(
