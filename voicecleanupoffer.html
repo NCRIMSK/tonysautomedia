@@ -97,7 +97,7 @@
             <div class="audio-player-container">
               <div class="track-buttons">
                 <button class="track-btn active" data-track="ai">
-                  <span class="track-label">AI Clean</span>
+                  <span class="track-label">Clean</span>
                 </button>
                 <button class="track-btn" data-track="original">
                   <span class="track-label">Original</span>
@@ -105,7 +105,7 @@
               </div>
               <div class="audio-player">
                 <div class="player-info">
-                  <span class="current-track">AI Clean</span>
+                  <span class="current-track">Clean</span>
                   <span class="track-time">0:00 / 0:00</span>
                 </div>
                 <div class="player-controls">
@@ -132,7 +132,7 @@
             </div>
             <audio id="voiceCleanupPlayer" preload="metadata">
               <source
-                src="Just%20AI.mp3"
+                src="My%20fix%20plus%20AI.mp3"
                 type="audio/mpeg"
                 data-track="ai"
               />
@@ -230,7 +230,7 @@
       );
 
       const voiceTracks = {
-        ai: "Just%20AI.mp3",
+        ai: "My%20fix%20plus%20AI.mp3",
         original: "Original.mp3",
       };
 
@@ -290,7 +290,7 @@
         voiceCleanupPlayer.volume = voiceVolumeSlider.value / 100;
       });
 
-      loadVoiceTrack("ai", "AI Clean");
+      loadVoiceTrack("ai", "Clean");
     </script>
     <script>
       const ctaButtons = document.querySelectorAll(
