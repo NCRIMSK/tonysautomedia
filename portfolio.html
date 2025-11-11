@@ -68,12 +68,6 @@
     </header>
 
     <main class="page-content">
-    <div class="blob-bg">
-      <div class="blob"></div>
-      <div class="blob"></div>
-      <div class="blob"></div>
-    </div>
-
     <header>
       <h1>Portfolio</h1>
       <div class="tagline">Selected works and experiments</div>
@@ -356,17 +350,6 @@
       pulseButtons();
       setInterval(pulseButtons, 60000);
     </script>
-    <script>
-      const blobs = document.querySelectorAll(".blob");
-      function moveBlob(b) {
-        const x = Math.random() * 100 - 50;
-        const y = Math.random() * 100 - 50;
-        b.style.transform = `translate(${x}vw, ${y}vh)`;
-      }
-      blobs.forEach((b) => {
-        setTimeout(() => moveBlob(b), 100);
-        setInterval(() => moveBlob(b), 30000);
-      });
-    </script>
+    
   </body>
 </html>
