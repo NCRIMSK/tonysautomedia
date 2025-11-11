@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="he" dir="rtl">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -16,10 +16,12 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-    <title>Portfolio - Tony's Media and Automation</title>
+
+    <title>תיק עבודות — טוני מדיה ואוטומציה</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css" />
@@ -27,18 +29,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="mobile-redirect.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../mobile-redirect.js"></script>
   </head>
-  <body class="portfolio-page">
+  <body class="portfolio-page noto-serif-hebrew-text">
     <header class="main-nav">
       <button
         class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
-        aria-label="Toggle navigation"
+        aria-label="פתיחת תפריט"
       >
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">תפריט</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -47,21 +49,21 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Services <span class="arrow">&gt;</span></a
+              >שירותים&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">פוסט אודיו</a>
+              <a href="aivideooffer.html">וידאו AI</a>
             </div>
           </div>
-          <a href="portfolio.html" class="nav-btn">Portfolio</a>
-          <a href="aboutme.html" class="nav-btn">About Me</a>
+          <a href="portfolio.html" class="nav-btn" aria-current="page">תיק עבודות</a>
+          <a href="aboutme.html" class="nav-btn">עליי</a>
         </div>
         <div class="nav-right">
-          <a href="index.html" class="nav-btn">Home</a>
+          <a href="index.html" class="nav-btn">בית</a>
           <div class="nav-lang">
-            <a href="he/portfolio.html" class="nav-btn" lang="he">he</a>
-            <a href="ru/portfolio.html" class="nav-btn" lang="ru">ru</a>
+            <a href="../portfolio.html" class="nav-btn" lang="en">en</a>
+            <a href="../ru/portfolio.html" class="nav-btn" lang="ru">ru</a>
           </div>
         </div>
       </nav>
@@ -75,9 +77,9 @@
     </div>
 
     <header>
-      <h1>Portfolio</h1>
-      <div class="tagline">Selected works and experiments</div>
-	  <br>
+      <h1>תיק עבודות</h1>
+      <div class="tagline">עבודות נבחרות וניסויים</div>
+          <br>
     </header>
 
     <div class="portfolio-grid">
@@ -93,16 +95,16 @@
           ></iframe>
         </div>
         <div class="card">
-          <h3>AI Commercial</h3>
+          <h3>פרסומת AI</h3>
           <ul class="skills">
-            <li>Video editing</li>
-            <li>Motion graphics</li>
-            <li>Sound design and mixing</li>
-            <li>Consistent product</li>
-            <li>AI video generation</li>
-            <li>AI music generation</li>
-            <li>AI voiceover generation</li>
-            <li>JSON Prompt engineering</li>
+            <li>עריכת וידאו</li>
+            <li>גרפיקה מונפשת</li>
+            <li>עיצוב סאונד ומיקס</li>
+            <li>מוצר עקבי</li>
+            <li>הפקת וידאו ב‑AI</li>
+            <li>הפקת מוזיקה ב‑AI</li>
+            <li>הפקת קריינות ב‑AI</li>
+            <li>הנדסת פרומפטים ב‑JSON</li>
           </ul>
         </div>
       </div>
@@ -118,14 +120,14 @@
           ></iframe>
         </div>
         <div class="card">
-          <h3>Explainer video</h3>
+          <h3>סרטון הסברה</h3>
           <ul class="skills">
-            <li>Video editing</li>
-            <li>Motion graphics</li>
-            <li>Sound design</li>
-            <li>Sound mixing</li>
-            <li>Scripting</li>
-            <li>Voiceover restoration</li>
+            <li>עריכת וידאו</li>
+            <li>גרפיקה מונפשת</li>
+            <li>עיצוב סאונד</li>
+            <li>מיקס סאונד</li>
+            <li>כתיבת תסריט</li>
+            <li>שיקום קריינות</li>
           </ul>
         </div>
       </div>
@@ -141,14 +143,14 @@
           ></iframe>
         </div>
         <div class="card">
-          <h3>Video review</h3>
+          <h3>סקירת וידאו</h3>
           <ul class="skills">
-            <li>Video editing</li>
-            <li>Motion graphics</li>
-            <li>Sound design and mixing</li>
-            <li>AI video generation</li>
-            <li>AI music generation</li>
-            <li>AI voiceover generation</li>
+            <li>עריכת וידאו</li>
+            <li>גרפיקה מונפשת</li>
+            <li>עיצוב סאונד ומיקס</li>
+            <li>הפקת וידאו ב‑AI</li>
+            <li>הפקת מוזיקה ב‑AI</li>
+            <li>הפקת קריינות ב‑AI</li>
           </ul>
         </div>
       </div>
@@ -164,36 +166,36 @@
           ></iframe>
         </div>
         <div class="card">
-          <h3>Documentary production</h3>
+          <h3>הפקה דוקומנטרית</h3>
           <ul class="skills">
-            <li>Video editing</li>
-            <li>Motion graphics</li>
-            <li>Sound design and mixing</li>
-            <li>Color Correction</li>
-            <li>Archival footage restoration</li>
-            <li>Voiceover restoration</li>
+            <li>עריכת וידאו</li>
+            <li>גרפיקה מונפשת</li>
+            <li>עיצוב סאונד ומיקס</li>
+            <li>תיקון צבע</li>
+            <li>שיקום חומרי ארכיון</li>
+            <li>שיקום קריינות</li>
           </ul>
         </div>
       </div>
 <div class="audio-demo">
-        <h3 class="demo-title">Audio Restoration</h3>
-        <p class="demo-subtitle">Your voice can be clean in any circumstances</p>
+        <h3 class="demo-title">שיקום אודיו</h3>
+        <p class="demo-subtitle">הקול שלכם יכול להיות נקי בכל סיטואציה</p>
 
         <div class="audio-player-container">
           <div class="track-buttons">
             <button class="track-btn active" data-track="fixed">
-                            <span class="track-label">Fixed</span>
+                            <span class="track-label">אחרי תיקון</span>
             </button>
             <button class="track-btn" data-track="original">
-              
-              <span class="track-label">Original</span>
+
+              <span class="track-label">מקורי</span>
             </button>
-            
+
           </div>
 
           <div class="audio-player">
             <div class="player-info">
-              <span class="current-track">Check the difference</span>
+              <span class="current-track">השוו את ההבדל</span>
               <span class="track-time">0:00 / 0:00</span>
             </div>
 
@@ -220,26 +222,26 @@
               </div>
             </div>
           </div>
-		  </div>
-		  <audio id="audioPlayer" preload="metadata">
+                  </div>
+                  <audio id="audioPlayer" preload="metadata">
           <source
-            src="My%20fix%20plus%20AI.mp3"
+            src="../My%20fix%20plus%20AI.mp3"
             type="audio/mpeg"
             data-track="fixed"
           />
-          <source src="Original.mp3" type="audio/mpeg" data-track="original" />
-          <source src="Just%20AI.mp3" type="audio/mpeg" data-track="ai" />
-          Your browser does not support the audio element.
+          <source src="../Original.mp3" type="audio/mpeg" data-track="original" />
+          <source src="../Just%20AI.mp3" type="audio/mpeg" data-track="ai" />
+          הדפדפן שלכם אינו תומך בנגן האודיו.
         </audio>
     </div>
-	<div class="card">
-          <h3>Audio Restoration</h3>
+        <div class="card">
+          <h3>שיקום אודיו</h3>
           <ul class="skills">
-            <li>Raw Footage Clean-up</li>
-            <li>background remove</li>
-            <li>Balance</li>
-            <li>Loudness Correction</li>
-            <li>Archival footage restoration</li>
+            <li>ניקוי חומר גלם</li>
+            <li>הסרת רעשים</li>
+            <li>איזון ואקולייזציה</li>
+            <li>התאמת עוצמות</li>
+            <li>שיקום חומרי ארכיון</li>
             </ul>
         </div>
 
@@ -248,14 +250,14 @@
       <a
         href="mailto:contentmage@tonysautomedia.com"
         class="retro-button"
-        aria-label="Email"
+        aria-label="אימייל"
       >
         <i class="fa-solid fa-envelope"></i>
       </a>
       <a
         href="https://wa.me/972534384116"
         class="retro-button"
-        aria-label="WhatsApp"
+        aria-label="וואטסאפ"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
@@ -274,7 +276,7 @@
       </div>
     </footer>
 
-    <script src="nav.js"></script>
+    <script src="../nav.js"></script>
     <script>
       const audioPlayer = document.getElementById("audioPlayer");
       const playPauseBtn = document.getElementById("playPauseBtn");
@@ -285,9 +287,9 @@
       const volumeSlider = document.querySelector(".volume-slider");
 
       const tracks = {
-        fixed: "My%20fix%20plus%20AI.mp3",
-        original: "Original.mp3",
-        ai: "Just%20AI.mp3",
+        fixed: "../My%20fix%20plus%20AI.mp3",
+        original: "../Original.mp3",
+        ai: "../Just%20AI.mp3",
       };
 
       function formatTime(sec) {
@@ -341,7 +343,7 @@
         audioPlayer.volume = volumeSlider.value / 100;
       });
 
-      loadTrack("fixed", "My Fix + AI");
+      loadTrack("fixed", "אחרי תיקון");
     </script>
     <script>
       const ctaButtons = document.querySelectorAll(

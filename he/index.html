@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="he" dir="rtl">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -17,9 +17,11 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tony's Media and Automation</title>
+    <title>טוני — מדיה ואוטומציה</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css" />
@@ -27,18 +29,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="mobile-redirect.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../mobile-redirect.js"></script>
   </head>
-  <body>
+  <body class="noto-serif-hebrew-text">
     <header class="main-nav">
       <button
         class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
-        aria-label="Toggle navigation"
+        aria-label="פתיחת תפריט"
       >
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">תפריט</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -47,27 +49,26 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Services&nbsp;<span class="arrow">&gt;</span></a
+              >שירותים&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">פוסט אודיו</a>
+              <a href="aivideooffer.html">וידאו AI</a>
             </div>
           </div>
-          <a href="portfolio.html" class="nav-btn">Portfolio</a>
-          <a href="aboutme.html" class="nav-btn">About Me</a>
+          <a href="portfolio.html" class="nav-btn">תיק עבודות</a>
+          <a href="aboutme.html" class="nav-btn">עליי</a>
         </div>
         <div class="nav-right">
-          <a href="index.html" class="nav-btn">Home</a>
+          <a href="index.html" class="nav-btn" aria-current="page">בית</a>
           <div class="nav-lang">
-            <a href="he/index.html" class="nav-btn" lang="he">he</a>
-            <a href="ru/index.html" class="nav-btn" lang="ru">ru</a>
+            <a href="../index.html" class="nav-btn" lang="en">en</a>
+            <a href="../ru/index.html" class="nav-btn" lang="ru">ru</a>
           </div>
         </div>
       </nav>
     </header>
     <main class="page-content">
-    <!-- Animated Background -->
     <div class="blob-bg">
       <div class="blob"></div>
       <div class="blob"></div>
@@ -75,56 +76,53 @@
     </div>
 
     <header>
-      <h1>Tony's Media and Automation</h1>
-      <div class="tagline">From raw idea to <strong>automated content!</strong></div>
+      <h1>טוני — מדיה ואוטומציה</h1>
+      <div class="tagline">מרעיון גולמי אל <strong>תוכן אוטומטי!</strong></div>
     </header>
-	<div class="cards-column">
-		<div class="cards-row">
-      
+        <div class="cards-column">
+                <div class="cards-row">
+
         <div class="card">
-            <img src="audio_waveforms.png" alt="Post-Production" />
+            <img src="../audio_waveforms.png" alt="פוסט פרודקשן" />
           <div class="card-content">
-          <h2>Audio & Video <strong>Post-Production</strong></h2>
+          <h2>פוסט <strong>אודיו ווידאו</strong></h2>
           <br />
           <p>
-            I <strong>fix</strong> imperfect content and make it broadcast-grade. From noisy Zooms to full-length documentaries and films
-            20+ years in post-production, award-winning films credits.
+            אני <strong>מתקן</strong> תוכן לא מושלם והופך אותו למוכן לשידור — משיחות זום רועשות ועד סרטים תיעודיים. יותר מ‑20 שנות ניסיון וקרדיטים בסרטים זוכי פרסים.
           </p>
         </div>
       </div>
 
         <div class="card">
-            <img src="smartphone_screen.png" alt="Media content creation" />
+            <img src="../smartphone_screen.png" alt="יצירת תוכן" />
           <div class="card-content">
-          <h2>Media <strong>content creation</strong></h2>
+          <h2>יצירת <strong>תוכן מדיה</strong></h2>
           <br />
           <p>
-            I <strong>craft</strong> scroll-stopping short videos with consistent AI
-            visuals, strong hooks, and visual <em>integrity</em>.
+            אני <strong>בונה</strong> סרטונים קצרים שעוצרים את הגלילה עם ויז'ואלים עקביים ב‑AI, הוקים חזקים ושלמות <em>ויזואלית</em>.
           </p>
         </div>
       </div>
         </div>
       <div class="cards-row">
        <div class="card">
-        <img src="connected_nodes.png" alt="Content automation" />
+        <img src="../connected_nodes.png" alt="אוטומציה של תוכן" />
         <div class="card-content">
-          <h2><strong>Automation & Integrations</strong></h2>
+          <h2><strong>אוטומציה ואינטגרציות</strong></h2>
           <br />
           <p>
-            I <strong>automate</strong> repetitive tasks to eliminate your boredom
-            And keeping your content moving while you stay focused on ideas.
+            אני <strong>ממכן</strong> את המשימות החוזרות כדי לשחרר אתכם משעמום,
+            ולשמור על התוכן מתקדם בזמן שאתם מתמקדים ברעיונות.
           </p>
         </div>
       </div>
          <div class="card">
-        <img src="program_code.png" alt="Apps and development" />
+        <img src="../program_code.png" alt="אפליקציות ופיתוח" />
         <div class="card-content">
-          <h2><strong>Apps and developement</strong></h2>
+          <h2><strong>אפליקציות ופיתוח</strong></h2>
           <br />
           <p>
-            I <strong>develope</strong> tools and AI integrations that <em>elevate</em>
-            your life performance and reduce your bills
+            אני <strong>מפתח</strong> כלים ואינטגרציות AI שמגבירות ביצועים ומצמצמות עלויות.
           </p>
         </div>
       </div>
@@ -135,14 +133,14 @@
       <a
         href="mailto:contentmage@tonysautomedia.com"
         class="retro-button"
-        aria-label="Email"
+        aria-label="אימייל"
       >
         <i class="fa-solid fa-envelope"></i>
       </a>
       <a
         href="https://wa.me/972534384116"
         class="retro-button"
-        aria-label="WhatsApp"
+        aria-label="וואטסאפ"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
@@ -161,35 +159,6 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
-    <script src="nav.js"></script>
-    <script>
-      const ctaButtons = document.querySelectorAll(
-        ".cta-buttons .retro-button",
-      );
-
-      function pulseButtons() {
-        ctaButtons.forEach((btn) => btn.classList.add("pulse"));
-        setTimeout(() => {
-          ctaButtons.forEach((btn) => btn.classList.remove("pulse"));
-        }, 10000);
-      }
-
-      pulseButtons();
-      setInterval(pulseButtons, 60000);
-    </script>
-    <script>
-      const blobs = document.querySelectorAll('.blob');
-
-      function moveBlob(b) {
-        const x = Math.random() * 100 - 50;
-        const y = Math.random() * 100 - 50;
-        b.style.transform = `translate(${x}vw, ${y}vh)`;
-      }
-
-      blobs.forEach((b) => {
-        setTimeout(() => moveBlob(b), 100);
-        setInterval(() => moveBlob(b), 30000);
-      });
-    </script>
+    <script src="../nav.js"></script>
   </body>
 </html>

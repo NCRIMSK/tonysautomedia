@@ -13,19 +13,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>מדיניות פרטיות — MyStreetNumber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 
 </head>
-<body>
+<body class="noto-serif-hebrew-text">
     <header class="main-nav">
       <button
         class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
-        aria-label="Toggle navigation"
+        aria-label="פתיחת תפריט"
       >
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">תפריט</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -34,18 +37,22 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Services <span class="arrow">&gt;</span></a
+              >שירותים&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">פוסט אודיו</a>
+              <a href="aivideooffer.html">וידאו AI</a>
             </div>
           </div>
-          <a href="portfolio.html" class="nav-btn">Portfolio</a>
-          <a href="aboutme.html" class="nav-btn">About Me</a>
+          <a href="portfolio.html" class="nav-btn">תיק עבודות</a>
+          <a href="aboutme.html" class="nav-btn">עליי</a>
         </div>
         <div class="nav-right">
-          <a href="index.html" class="nav-btn">Home</a>
+          <a href="index.html" class="nav-btn">בית</a>
+          <div class="nav-lang">
+            <a href="../ru/privacy.html" class="nav-btn" lang="ru">ru</a>
+            <a href="../privacy_en.html" class="nav-btn" lang="en">en</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -180,6 +187,6 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
-    <script src="nav.js"></script>
+    <script src="../nav.js"></script>
   </body>
 </html>

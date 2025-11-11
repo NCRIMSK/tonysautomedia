@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0X2H6SQNQP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0X2H6SQNQP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Предложение по очистке голоса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="voice-cleanup-page playfair-display-text">
+    <header class="main-nav">
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Открыть меню"
+      >
+        <span class="sr-only">Меню</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-navigation" class="nav-menu">
+        <div class="nav-left">
+          <div class="nav-dropdown">
+            <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
+              >Услуги&nbsp;<span class="arrow">&gt;</span></a
+            >
+            <div class="dropdown-content">
+              <a href="taudiomagic.html">Аудио постпродакшн</a>
+              <a href="aivideooffer.html">Видеопредложение AI</a>
+              <a
+                href="voicecleanupoffer.html"
+                aria-current="page"
+                data-offer="voice-cleanup"
+                >Очистка голоса</a
+              >
+            </div>
+          </div>
+          <a href="portfolio.html" class="nav-btn">Портфолио</a>
+          <a href="aboutme.html" class="nav-btn">Обо мне</a>
+        </div>
+        <div class="nav-right">
+          <a href="index.html" class="nav-btn">Главная</a>
+          <div class="nav-lang">
+            <a href="../voicecleanupoffer.html" class="nav-btn" lang="en">en</a>
+            <a href="../he/voicecleanupoffer.html" class="nav-btn" lang="he">he</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <div class="blob-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+
+      <header>
+        <h1>Очистка голоса</h1>
+        <div class="tagline">Верните ясность, сохранив характер вашего голоса</div>
+      </header>
+
+      <section class="voice-cleanup container">
+        <div class="voice-cleanup-grid">
+          <div class="offer-card audio-card">
+            <h2 class="section-title">Услышьте разницу</h2>
+            <p>
+              Переключайтесь между оригинальной записью и моей очисткой с помощью
+              ИИ, чтобы услышать, сколько шума и резкости можно убрать, сохранив
+              исполнение.
+            </p>
+            <div class="audio-player-container">
+              <div class="track-buttons">
+                <button class="track-btn active" data-track="ai">
+                  <span class="track-label">AI-очистка</span>
+                </button>
+                <button class="track-btn" data-track="original">
+                  <span class="track-label">Оригинал</span>
+                </button>
+              </div>
+              <div class="audio-player">
+                <div class="player-info">
+                  <span class="current-track">AI-очистка</span>
+                  <span class="track-time">0:00 / 0:00</span>
+                </div>
+                <div class="player-controls">
+                  <button class="play-pause-btn" id="voiceCleanupPlayPause">
+                    <span class="play-icon">▶️</span>
+                  </button>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-fill"></div>
+                    </div>
+                  </div>
+                  <div class="volume-container">
+                    <span class="volume-icon">🔊</span>
+                    <input
+                      type="range"
+                      class="volume-slider"
+                      min="0"
+                      max="100"
+                      value="70"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <audio id="voiceCleanupPlayer" preload="metadata">
+              <source
+                src="../Just%20AI.mp3"
+                type="audio/mpeg"
+                data-track="ai"
+              />
+              <source
+                src="../Original.mp3"
+                type="audio/mpeg"
+                data-track="original"
+              />
+              Ваш браузер не поддерживает элемент audio.
+            </audio>
+          </div>
+
+          <div class="offer-card form-card">
+            <h2 class="section-title">Начните очистку</h2>
+            <p>
+              Расскажите о проекте, и я свяжусь с вами с индивидуальным планом
+              по созданию безупречных голосовых дорожек.
+            </p>
+            <div class="form-embed">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdG85R-DSKVQE_RiTLUJX-PM2VLAiGrMGMxoJI4h1LKWqA0iA/viewform?embedded=true"
+                width="640"
+                height="554"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                >Loading…</iframe
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cta-buttons">
+      <a
+        href="mailto:contentmage@tonysautomedia.com"
+        class="retro-button"
+        aria-label="Email"
+      >
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a
+        href="https://wa.me/972534384116"
+        class="retro-button"
+        aria-label="WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <br /><br /><br />
+    <footer>
+      <div class="social-links">
+        <a href="index.html"
+          ><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a
+        >
+        <a href="mailto:contentmage@tonysautomedia.com"
+          ><i class="fa-solid fa-envelope"></i> Email</a
+        >
+        <a href="https://www.imdb.com/name/nm17689799"
+          ><i class="fa fa-imdb"></i> IMDb</a
+        >
+        <a href="https://linktr.ee/tonyzachesov"
+          ><i class="fa-brands fa-linktree"></i></i> Linktree</a
+        >
+        <a href="https://www.facebook.com/necrozzmsk"
+          ><i class="fa-brands fa-facebook"></i> Facebook</a
+        >
+        <a href="https://wa.me/972534384116"
+          ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+        >
+        <a href="https://www.youtube.com/@TonyNeuro"
+          ><i class="fa-brands fa-youtube"></i> YouTube</a
+        >
+        <a href="https://www.tiktok.com/@tony.neuro"
+          ><i class="fa-brands fa-tiktok"></i> TikTok</a
+        >
+      </div>
+    </footer>
+
+    <script src="../nav.js"></script>
+    <script>
+      const voiceCleanupPlayer = document.getElementById("voiceCleanupPlayer");
+      const voicePlayPauseBtn = document.getElementById("voiceCleanupPlayPause");
+      const voiceTrackButtons = document.querySelectorAll(
+        ".voice-cleanup-page .track-btn",
+      );
+      const voiceTrackLabel = document.querySelector(
+        ".voice-cleanup-page .current-track",
+      );
+      const voiceProgressFill = document.querySelector(
+        ".voice-cleanup-page .progress-fill",
+      );
+      const voiceTrackTime = document.querySelector(
+        ".voice-cleanup-page .track-time",
+      );
+      const voiceVolumeSlider = document.querySelector(
+        ".voice-cleanup-page .volume-slider",
+      );
+
+      const voiceTracks = {
+        ai: "../Just%20AI.mp3",
+        original: "../Original.mp3",
+      };
+
+      function formatVoiceTime(sec) {
+        const m = Math.floor(sec / 60) || 0;
+        const s = Math.floor(sec % 60) || 0;
+        return `${m}:${s.toString().padStart(2, "0")}`;
+      }
+
+      function loadVoiceTrack(key, label) {
+        voiceCleanupPlayer.src = voiceTracks[key];
+        voiceCleanupPlayer.load();
+        voiceTrackLabel.textContent = label;
+        voicePlayPauseBtn.innerHTML = '<span class="play-icon">▶️</span>';
+        voiceTrackTime.textContent = `0:00 / 0:00`;
+      }
+
+      voiceTrackButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          voiceTrackButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          loadVoiceTrack(
+            btn.dataset.track,
+            btn.querySelector(".track-label").textContent,
+          );
+          voiceCleanupPlayer.play();
+          voicePlayPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
+        });
+      });
+
+      voicePlayPauseBtn.addEventListener("click", () => {
+        if (voiceCleanupPlayer.paused) {
+          voiceCleanupPlayer.play();
+          voicePlayPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
+        } else {
+          voiceCleanupPlayer.pause();
+          voicePlayPauseBtn.innerHTML = '<span class="play-icon">▶️</span>';
+        }
+      });
+
+      voiceCleanupPlayer.addEventListener("timeupdate", () => {
+        const progress =
+          (voiceCleanupPlayer.currentTime / voiceCleanupPlayer.duration) * 100;
+        voiceProgressFill.style.width = `${progress || 0}%`;
+        voiceTrackTime.textContent = `${formatVoiceTime(
+          voiceCleanupPlayer.currentTime,
+        )} / ${formatVoiceTime(voiceCleanupPlayer.duration)}`;
+      });
+
+      voiceCleanupPlayer.addEventListener("loadedmetadata", () => {
+        voiceTrackTime.textContent = `0:00 / ${formatVoiceTime(
+          voiceCleanupPlayer.duration,
+        )}`;
+      });
+
+      voiceVolumeSlider.addEventListener("input", () => {
+        voiceCleanupPlayer.volume = voiceVolumeSlider.value / 100;
+      });
+
+      loadVoiceTrack("ai", "AI-очистка");
+    </script>
+    <script>
+      const ctaButtons = document.querySelectorAll(
+        ".cta-buttons .retro-button",
+      );
+      function pulseButtons() {
+        ctaButtons.forEach((btn) => btn.classList.add("pulse"));
+        setTimeout(() => {
+          ctaButtons.forEach((btn) => btn.classList.remove("pulse"));
+        }, 10000);
+      }
+      pulseButtons();
+      setInterval(pulseButtons, 60000);
+    </script>
+    <script>
+      const blobs = document.querySelectorAll(".blob");
+      function moveBlob(b) {
+        const x = Math.random() * 100 - 50;
+        const y = Math.random() * 100 - 50;
+        b.style.transform = `translate(${x}vw, ${y}vh)`;
+      }
+      blobs.forEach((b) => {
+        setTimeout(() => moveBlob(b), 100);
+        setInterval(() => moveBlob(b), 30000);
+      });
+    </script>
+  </body>
+</html>

@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -31,25 +32,43 @@
   </head>
   <body>
     <header class="main-nav">
-
-      <div class="nav-left">
-            <div class="nav-dropdown">
-          <a href="#" class="nav-btn">Offers <span class="arrow">&gt;</span></a>
-          <div class="dropdown-content" class="nav-link">
-            <a href="taudiomagic.html">Audio Post-</a>
-            <a href="https://tonys.lovabel.app">Automation</a>
-            <a href="aivideooffer.htm">AI Video Offer</a>
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-navigation" class="nav-menu">
+        <div class="nav-left">
+          <div class="nav-dropdown">
+            <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
+              >Services <span class="arrow">&gt;</span></a
+            >
+            <div class="dropdown-content">
+              <a href="taudiomagic.html">Audio Post-</a>
+              <a href="aivideooffer.htm">AI Video Offer</a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="nav-btn">Portfolio</a>
+          <a href="aboutme.html" class="nav-btn">About Me</a>
+        </div>
+        <div class="nav-right">
+          <a href="index.html" class="nav-btn">Home</a>
+          <div class="nav-lang">
+            <a href="he/taudiomagic.html" class="nav-btn" lang="he">he</a>
+            <a href="ru/taudiomagic.html" class="nav-btn" lang="ru">ru</a>
           </div>
         </div>
-                <a href="portfolio.html" class="nav-btn">Portfolio</a>
-                <a href="aboutme.html" class="nav-btn">About Me</a>
-    </div>
-    <div class="nav-right">
-      <a href="index.html" class="nav-btn">Home</a>
-        </div>
+      </nav>
     </header>
 
     <!-- Animated Background -->
+    <main class="page-content">
     <div class="blob-bg">
       <div class="blob"></div>
       <div class="blob"></div>
@@ -168,6 +187,7 @@
       </p>
     </div>
 
+    </main>
     <div class="cta-buttons">
       <a
         href="mailto:contentmage@tonysautomedia.com?body=Hello!%20I%20want%20to%20order%20a%20video"

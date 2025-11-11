@@ -1,32 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru" dir="ltr">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X2H6SQNQP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0X2H6SQNQP');
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Tony's Media and Automation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Обо мне — Медиа и автоматизация Тони</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/poi7mto.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="mobile-redirect.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../mobile-redirect.js"></script>
   </head>
-  <body>
+  <body class="playfair-display-text">
     <header class="main-nav">
       <button
         class="nav-toggle"
         aria-expanded="false"
         aria-controls="primary-navigation"
-        aria-label="Toggle navigation"
+        aria-label="Переключить навигацию"
       >
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">Меню</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -35,21 +37,21 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Services <span class="arrow">&gt;</span></a
+              >Услуги&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">Аудио пост-продакшн</a>
+              <a href="aivideooffer.html">AI видео</a>
             </div>
           </div>
-          <a href="portfolio.html" class="nav-btn">Portfolio</a>
-          <a href="aboutme.html" class="nav-btn">About Me</a>
+          <a href="portfolio.html" class="nav-btn">Портфолио</a>
+          <a href="aboutme.html" class="nav-btn" aria-current="page">Обо мне</a>
         </div>
         <div class="nav-right">
-          <a href="index.html" class="nav-btn">Home</a>
+          <a href="index.html" class="nav-btn">Главная</a>
           <div class="nav-lang">
-            <a href="he/aboutme.html" class="nav-btn" lang="he">he</a>
-            <a href="ru/aboutme.html" class="nav-btn" lang="ru">ru</a>
+            <a href="../he/aboutme.html" class="nav-btn" lang="he">he</a>
+            <a href="../aboutme.html" class="nav-btn" lang="en">en</a>
           </div>
         </div>
       </nav>
@@ -61,14 +63,12 @@
       <div class="blob"></div>
     </div>
     <header>
-      <h1>About Me</h1>
+      <h1>Обо мне</h1>
     </header>
     <div class="card">
       <div class="card-content">
-        <h3><strong>Who I am?:</strong></h3>
-        I’m a media producer (20+ years) and creative automator (a little less) who blends pro-level audio,
-        visuals, practical automation and AI workflow enhancment. I help creators, startups,
-        and small teams ship more, get better outcome, and publish faster.<br />
+        <h3><strong>Кто я?</strong></h3>
+        Я медиапродюсер с опытом более 20 лет и креативный автоматизатор. Я совмещаю профессиональный звук, визуал, прикладную автоматизацию и AI-улучшения рабочих процессов. Помогаю создателям, стартапам и небольшим командам выпускать больше, получать лучшие результаты и публиковать быстрее.<br />
       </div>
     </div>
     <div class="legal-info">
@@ -79,10 +79,10 @@
     </div>
     </main>
     <div class="cta-buttons">
-      <a href="aivideooffer.htm#contact-form" class="retro-button" aria-label="Contact Form">
+      <a href="aivideooffer.html#contact-form" class="retro-button" aria-label="Форма связи">
         <i class="fa-solid fa-envelope"></i>
       </a>
-      <a href="aivideooffer.htm#contact-form" class="retro-button" aria-label="Contact Form">
+      <a href="aivideooffer.html#contact-form" class="retro-button" aria-label="Форма связи">
         <i class="fa-brands fa-whatsapp"></i>
       </a>
     </div>
@@ -98,7 +98,7 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
-    <script src="nav.js"></script>
+    <script src="../nav.js"></script>
     <script>
       const ctaButtons = document.querySelectorAll('.cta-buttons .retro-button');
       function pulseButtons(){
