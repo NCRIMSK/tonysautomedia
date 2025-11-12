@@ -82,8 +82,8 @@ body > * {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  margin-left: 15vw;  /* 1/6 экрана слева */
-  margin-right: 15vw; /* 1/6 экрана справа */
+  margin-left: 5vw;  /* 1/6 экрана слева */
+  margin-right: 5vw; /* 1/6 экрана справа */
 }
 
 .fa-solid,
@@ -111,7 +111,7 @@ body > * {
 
 .cards-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0;
 }
 
@@ -125,7 +125,6 @@ body > * {
   box-shadow: none;
   padding: 0;
   width: auto;
-  margin: calc(var(--card-vertical-gap) / 2) var(--card-side-margin);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,7 +146,6 @@ body > * {
 .offer-card iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
   display: block;
   object-fit: cover;
 }
@@ -778,7 +776,7 @@ footer {
 
 .sound-wave {
   width: clamp(3px, 0.6vw, 6px);
-  background: var(--magenta);
+  background: var(--color-contrast);
   animation: wave 1s infinite ease-in-out;
 }
 
