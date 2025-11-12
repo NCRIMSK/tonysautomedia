@@ -4,6 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
   const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
 
+  const setNavExpanded = isOpen => {
+    if (!mainNav || !navToggle) {
+      return;
+    }
+
+    mainNav.classList.toggle('nav-open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+
+    if (navMenu) {
+      navMenu.toggleAttribute('data-nav-open', isOpen);
+    }
+  };
+
   const closeDropdown = dropdown => {
     dropdown.classList.remove('open');
     const trigger = dropdown.querySelector('.nav-btn');
@@ -16,11 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdowns.forEach(closeDropdown);
   };
 
+  const closeNav = () => {
+    setNavExpanded(false);
+    closeAllDropdowns();
+  };
+
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      if (!isOpen) {
+      const willOpen = !mainNav.classList.contains('nav-open');
+      setNavExpanded(willOpen);
+
+      if (!willOpen) {
         closeAllDropdowns();
       }
     });
@@ -57,9 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
       mainNav.classList.contains('nav-open') &&
       !mainNav.contains(event.target)
     ) {
-      mainNav.classList.remove('nav-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      closeAllDropdowns();
+      closeNav();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeNav();
     }
   });
 
@@ -75,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (mainNav.classList.contains('nav-open')) {
-        mainNav.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        closeAllDropdowns();
+        closeNav();
       }
     });
   }
