@@ -47,11 +47,12 @@
         <div class="nav-left">
           <div class="nav-dropdown">
             <a href="#" class="nav-btn" aria-haspopup="true" aria-expanded="false"
-              >Services <span class="arrow">&gt;</span></a
+              >Services&nbsp;<span class="arrow">&gt;</span></a
             >
             <div class="dropdown-content">
-              <a href="taudiomagic.html">Audio Post-</a>
-              <a href="aivideooffer.htm">AI Video Offer</a>
+              <a href="taudiomagic.html">Sound Editing</a>
+              <a href="aivideooffer.htm">Video Creation</a>
+              <a href="voicecleanupoffer.html">Voice Clean Up</a>
             </div>
           </div>
           <a href="portfolio.html" class="nav-btn">Portfolio</a>
@@ -69,13 +70,7 @@
 
     <!-- Animated Background -->
     <main class="page-content">
-    <div class="blob-bg">
-      <div class="blob"></div>
-      <div class="blob"></div>
-      <div class="blob"></div>
-    </div>
-
-    <header>
+<header>
       <h1>Audio Post Production</h1>
       <div class="tagline">
         Let Your Ads <strong>Be Heard</strong>
@@ -222,10 +217,10 @@
 
     <footer>
       <div class="social-links">
-            <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
-                <a href="mailto:contentmage@tonysautomedia.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="https://www.imdb.com/name/nm17689799"><i class="fa-solid fa-imdb"></i> IMDb</a>
-                <a href="https://linktr.ee/tonyzachesov"><i class="fa-brands fa-linktree"></i></i> Linktree</a>
+        <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
+        <a href="mailto:contentmage@tonysautomedia.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://www.imdb.com/name/nm17689799"><i class="fa-brands fa-imdb"></i> IMDb</a>
+        <a href="https://linktr.ee/tonyzachesov"><i class="fa-brands fa-linktree"></i> Linktree</a>
         <a href="https://www.facebook.com/necrozzmsk"><i class="fa-brands fa-facebook"></i> Facebook</a>
         <a href="https://wa.me/972534384116"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         <a href="https://www.youtube.com/@TonyNeuro"><i class="fa-brands fa-youtube"></i> YouTube</a>
@@ -245,17 +240,5 @@
       pulseButtons();
       setInterval(pulseButtons, 60000);
     </script>
-    <script>
-      const blobs = document.querySelectorAll('.blob');
-      function moveBlob(b) {
-        const x = Math.random() * 100 - 50;
-        const y = Math.random() * 100 - 50;
-        b.style.transform = `translate(${x}vw, ${y}vh)`;
-      }
-      blobs.forEach((b) => {
-        setTimeout(() => moveBlob(b), 100);
-        setInterval(() => moveBlob(b), 30000);
-      });
-    </script>
-  </body>
+</body>
 </html>
