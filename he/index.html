@@ -30,6 +30,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../landing.css" />
     <script src="../mobile-redirect.js"></script>
   </head>
   <body class="noto-serif-hebrew-text landing bg-audio">
@@ -70,66 +71,58 @@
         </div>
       </nav>
     </header>
-    <main class="page-content">
-      <section class="landing-hero">
-        <div class="landing-hero__content">
+    <main class="page-content landing-stack">
+      <section class="landing-card landing-card--hero">
+        <div class="landing-card__body">
           <h1>Tony's Media and Automation</h1>
-          <div class="landing-hero__cta">
-            <a
-              href="mailto:contentmage@tonysautomedia.com"
-              class="retro-button"
-              aria-label="אימייל"
-            >
-              <i class="fa-solid fa-envelope"></i>
-              <span>שלחו לי אימייל</span>
-            </a>
-            <a
-              href="https://wa.me/972534384116"
-              class="retro-button"
-              aria-label="וואטסאפ"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>דברו איתי בוואטסאפ</span>
-            </a>
+        </div>
+      </section>
+
+      <section class="landing-card landing-card--quote">
+        <div class="landing-card__body">
+          <p>
+            מה ההבדל בין פסטה במסעדת מישלן לפסטה בבית?<br />
+            <br />
+            הידיים של מקצוען.
+          </p>
+        </div>
+      </section>
+
+      <section class="landing-card landing-card--buttons">
+        <div class="landing-card__body">
+          <div class="landing-buttons">
+            <a href="portfolio.html" class="pill-button">תיק העבודות שלי</a>
+            <a href="aboutme.html" class="pill-button">גלו עוד עליי</a>
           </div>
         </div>
       </section>
 
-      <section class="landing-section">
-        <p>
-          מה ההבדל בין פסטה במסעדת מישלן לפסטה בבית?<br />
-          <br />
-          הידיים של מקצוען.
-        </p>
-      </section>
-
-      <section class="landing-section">
-        <div class="landing-buttons">
-          <a href="aboutme.html" class="pill-button">גלו עוד עליי</a>
-          <a href="portfolio.html" class="pill-button">תיק העבודות שלי</a>
+      <section class="landing-card landing-card--offer" id="contact-form">
+        <div class="offer-card">
+          <h2>כבר יודעים למה הגעתם? מלאו את הטופס:</h2>
+          <div class="form-embed">
+            <iframe
+              loading="lazy"
+              src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
+              allowfullscreen="allowfullscreen"
+              allow="fullscreen"
+            ></iframe>
+          </div>
+          <p class="form-consent">
+            בשליחת הטופס אתם מסכימים לעיבוד הנתונים האישיים בהתאם ל־
+            <a href="privacy.html">מדיניות הפרטיות</a>.
+          </p>
         </div>
-      </section>
-
-      <section class="landing-section landing-form" id="contact-form">
-        <h2>כבר יודעים למה הגעתם? מלאו את הטופס:</h2>
-        <p>אחזור אליכם בתוך יום עסקים אחד.</p>
-        <div
-          style="position: relative; width: 100%; height: 0; padding-top: 65.1042%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 1rem; will-change: transform;"
-        >
-          <iframe
-            loading="lazy"
-            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-            src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen"
-          ></iframe>
-        </div>
-        <p class="form-consent">
-          בשליחת הטופס אתם מסכימים לעיבוד הנתונים האישיים בהתאם ל־
-          <a href="privacy.html">מדיניות הפרטיות</a>.
-        </p>
       </section>
     </main>
+    <div class="cta-buttons">
+      <a href="mailto:contentmage@tonysautomedia.com" class="retro-button" aria-label="אימייל">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/972534384116" class="retro-button" aria-label="וואטסאפ">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
     <footer>
       <div class="social-links">
         <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
