@@ -74,7 +74,7 @@ video {
 }
 
 .card--vertical-video .vertical-video-card {
-  width: min(100%, 33vw);
+  width: min(100%, 45vw);
   display: flex;
   justify-content: center;
   margin-inline: auto;
@@ -92,7 +92,7 @@ video {
 
 .vertical-video-card__media-wrapper {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   display: flex;
 }
