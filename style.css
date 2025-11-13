@@ -86,6 +86,116 @@ body > * {
   margin-right: 5vw; /* 1/6 экрана справа */
 }
 
+.landing .page-content {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.landing-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(6rem, 8vh, 8rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.landing-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.5rem, 3vh, 3rem);
+  max-width: 48rem;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(239, 236, 233, 0.12);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(239, 236, 233, 0.35);
+}
+
+.landing-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 1.75rem);
+}
+
+.landing-hero__cta .retro-button {
+  inline-size: clamp(12rem, 28vw, 16rem);
+  block-size: auto;
+  border-radius: 999px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-block: 0.85rem;
+}
+
+.landing-section {
+  width: min(90vw, 52rem);
+  margin: clamp(2rem, 6vh, 4rem) auto;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(239, 236, 233, 0.92);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vh, 2rem);
+}
+
+.landing-section p {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.7;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.landing-buttons .pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-highlight);
+  background: transparent;
+  color: var(--color-highlight);
+  font-size: clamp(1rem, 2.3vw, 1.2rem);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.landing-buttons .pill-button:hover,
+.landing-buttons .pill-button:focus-visible {
+  background-color: var(--color-highlight);
+  color: var(--color-base);
+  transform: translateY(-2px);
+}
+
+.landing-form {
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.landing-form h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.landing-form p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
 .fa-solid,
 .fa-brands {
   color: var(--color-accent-soft);
