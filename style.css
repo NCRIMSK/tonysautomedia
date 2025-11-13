@@ -280,6 +280,17 @@ h6 {
   gap: 1rem;
 }
 
+.bg-audio::before{
+  content:"";
+  position: fixed;        /* фиксируем к вьюпорту */
+  inset: 0;
+  background: url("audio_waveforms.png") center / cover no-repeat;
+  filter: sepia(1) contrast(1.25) brightness(1.05) blur(6px);
+  opacity: .4;            /* 40% */
+  pointer-events: none;   /* не мешает кликам */
+  z-index: -1;            /* под всем контентом */
+}
+
 .clients-section {
   position: relative;
   z-index: 1;

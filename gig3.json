@@ -1,0 +1,32 @@
+{
+  "gig_title": "Create a Cinematic Video With Expertise and AI",
+  "category": "Video & Animation > Video Editing",
+  "search_tags": ["ai video", "commercial", "promo", "music video", "director"],
+  "description": "AI tools are powerful—without real direction they fall flat. I guide the creative process from concept to final master, combining AI generation with professional post. Every second is paced, scored, and graded to look like a finished film—not a tech demo.\n\nWHAT YOU GET:\n• Direction, concept, and pacing by a human storyteller\n• AI-enhanced visuals (Sora/Veo-style pipeline)\n• Real sound design and color work for emotional impact\n• HD delivery (720p–1080p) tuned for YouTube, socials, or campaigns\n\nHybrid workflow—AI speed with film logic. The result is cinematic, intentional, and entirely yours.",
+  "packages": {
+    "basic": {
+      "name": "Concept Teaser",
+      "price_usd": 250,
+      "delivery_time_days": 4,
+      "includes": ["creative outline", "AI scene generation (up to 4 shots)", "editing & pacing", "temp music & FX", "720p master"],
+      "revisions": 2,
+      "runtime_output_seconds": 20
+    },
+    "standard": {
+      "name": "Cinematic Promo",
+      "price_usd": 600,
+      "delivery_time_days": 7,
+      "includes": ["script beats & shot plan", "AI scenes (up to 10)", "titles & transitions", "music bed & FX", "color pass", "sound sweetening", "720p or 1080p master"],
+      "revisions": 3,
+      "runtime_output_seconds": 30
+    },
+    "premium": {
+      "name": "Campaign Spot",
+      "price_usd": 1200,
+      "delivery_time_days": 12,
+      "includes": ["concept deck", "AI scenes (up to 20)", "voiceover (synthetic or provided)", "advanced color grade", "sound design & mastering", "usage guide", "1080p master"],
+      "revisions": 4,
+      "runtime_output_seconds": 60
+    }
+  }
+}
