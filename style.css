@@ -112,6 +112,17 @@ video {
   display: none;
 }
 
+.price-old {
+  text-decoration: line-through;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.price-new {
+  color: #c62828;
+  font-weight: 700;
+}
+
 @media (max-width: 960px) {
   .card--vertical-video .vertical-video-card {
     width: min(100%, 50vw);
