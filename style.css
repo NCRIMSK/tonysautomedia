@@ -86,6 +86,158 @@ body > * {
   margin-right: 5vw; /* 1/6 экрана справа */
 }
 
+
+.landing .page-content {
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.landing-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 6vh, 4.5rem);
+  padding: 0 clamp(1.5rem, 4vw, 3rem) clamp(6rem, 12vh, 8rem);
+}
+
+.landing-card {
+  width: min(92vw, 60rem);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.landing-card__body {
+  width: 100%;
+  background: rgba(239, 236, 233, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.15);
+  padding: clamp(2.5rem, 6vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(1.25rem, 3vh, 2rem);
+}
+
+.landing-card--hero {
+  min-height: 100vh;
+}
+
+.landing-card--hero .landing-card__body {
+  min-height: clamp(24rem, 80vh, 36rem);
+  background: rgba(239, 236, 233, 0.16);
+  border: 1px solid rgba(239, 236, 233, 0.45);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2rem 4.5rem rgba(0, 0, 0, 0.2);
+  gap: clamp(2rem, 6vh, 3rem);
+}
+
+.landing-card--hero h1 {
+  font-size: clamp(2.75rem, 9vw, 5.5rem);
+  letter-spacing: 0.08em;
+}
+
+.landing-card--quote p {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.7;
+}
+
+.landing-card--buttons .landing-card__body {
+  gap: clamp(1.5rem, 4vh, 2.5rem);
+  background: rgba(239, 236, 233, 0.92);
+}
+
+.landing-card--offer .offer-card {
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3vh, 2rem);
+  text-align: center;
+}
+
+.landing-card--offer .offer-card h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+}
+
+.landing-card--offer .offer-card p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.form-embed {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 65.1042%;
+  padding-bottom: 0;
+  box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+  margin-top: 1.6em;
+  margin-bottom: 0.9em;
+  overflow: hidden;
+  border-radius: 1rem;
+  will-change: transform;
+}
+
+.form-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.landing-buttons .pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-highlight);
+  background: transparent;
+  color: var(--color-highlight);
+  font-size: clamp(1rem, 2.3vw, 1.2rem);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.landing-buttons .pill-button:hover,
+.landing-buttons .pill-button:focus-visible {
+  background-color: var(--color-highlight);
+  color: var(--color-base);
+  transform: translateY(-2px);
+}
+
+.landing-form {
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.landing-form h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.landing-form p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
 .fa-solid,
 .fa-brands {
   color: var(--color-accent-soft);
