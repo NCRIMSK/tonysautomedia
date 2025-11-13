@@ -72,14 +72,13 @@
     </header>
 
     <main class="page-content">
-<header>
-      <h1>Портфолио</h1>
-      <div class="tagline">Выбранные работы и эксперименты</div>
-          <br>
-    </header>
+      <header>
+        <h1>Портфолио</h1>
+        <div class="tagline">Выбранные работы и эксперименты</div>
+        <br />
+      </header>
 
-    <div class="portfolio-grid">
-      <div class="pair">
+      <div class="portfolio-grid">
         <div class="card">
           <iframe
             src="https://www.youtube.com/embed/GuHLzmP-xZM?si=kiJv0iSBKVFYjuvb&amp;controls=0"
@@ -90,103 +89,91 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="card">
+        <div class="tagline">
           <h3>AI-реклама</h3>
-          <ul class="skills">
-            <li>Видеомонтаж</li>
-            <li>Моушен-дизайн</li>
-            <li>Звуковой дизайн и сведение</li>
-            <li>Консистентный образ продукта</li>
-            <li>AI-генерация видео</li>
-            <li>AI-генерация музыки</li>
-            <li>AI-генерация озвучки</li>
-            <li>Разработка JSON-промтов</li>
-          </ul>
         </div>
-      </div>
-      <div class="pair">
-        <div class="card">
-          <iframe
-            src="https://www.youtube.com/embed/9qeGSeha-LU?si=IDDWZhn9TedBIHfl&amp;controls=0"
-            title="Sound Design Explained"
-            frameborder="0"
-            allow="encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+
+        <div class="card card--vertical-video">
+          <div class="vertical-video-card">
+            <figure class="vertical-video-card__frame">
+              <div class="vertical-video-card__media-wrapper">
+                <iframe
+                  class="vertical-video-card__media"
+                  style="--embed-aspect: 4 / 5;"
+                  src="https://www.youtube.com/embed/VL5MwFb7tFs?si=MjCCfPnCX0roT262"
+                  title="AI Video Production Demo"
+                  frameborder="0"
+                  allow="encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <figcaption class="vertical-video-card__caption">
+                Вертикальный демонстрационный ролик нашего AI-процесса.
+              </figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="card">
-          <h3>Обучающее видео</h3>
-          <ul class="skills">
-            <li>Видеомонтаж</li>
-            <li>Моушен-дизайн</li>
-            <li>Звуковой дизайн</li>
-            <li>Сведение звука</li>
-            <li>Написание сценария</li>
-            <li>Реставрация озвучки</li>
-          </ul>
+        <div class="tagline">
+          <h3>Музыкальное видео</h3>
         </div>
-      </div>
-      <div class="pair">
+
         <div class="card">
           <iframe
             src="https://www.youtube.com/embed/JzXSnLSNEqQ?si=Btwrnq-sYxhtq4AE&amp;controls=0"
-            title="NotebookLM"
+            title="NotebookLM review video"
             frameborder="0"
             allow="encrypted-media; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
         </div>
-        <div class="card">
+        <div class="tagline">
           <h3>Видеообзор</h3>
-          <ul class="skills">
-            <li>Видеомонтаж</li>
-            <li>Моушен-дизайн</li>
-            <li>Звуковой дизайн и сведение</li>
-            <li>AI-генерация видео</li>
-            <li>AI-генерация музыки</li>
-            <li>AI-генерация озвучки</li>
-          </ul>
         </div>
-      </div>
-      <div class="pair">
+
         <div class="card">
           <iframe
             src="https://www.youtube.com/embed/wr8Q-fQHlRs?si=hYBLh7B38Zai1QWq&amp;controls=0"
-            title="Mikhoels suitcase"
+            title="Mikhoels' suitcase"
             frameborder="0"
             allow="encrypted-media; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
         </div>
-        <div class="card">
+        <div class="tagline">
           <h3>Документальное производство</h3>
-          <ul class="skills">
-            <li>Видеомонтаж</li>
-            <li>Моушен-графика</li>
-            <li>Звуковой дизайн и сведение</li>
-            <li>Цветокоррекция</li>
-            <li>Реставрация архивного видео</li>
-            <li>Реставрация озвучки</li>
-          </ul>
+        </div>
+
+        <div class="card">
+          <iframe
+            src="https://www.youtube.com/embed/KjNlmT_eDqY?si=Vn9lusQ4Cja8nNqW"
+            title="Silent solitude"
+            frameborder="0"
+            allow="encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="tagline">
+          <h3>Музыкальное видео</h3>
         </div>
       </div>
-<div class="audio-demo">
+
+      <!--
+      <div class="audio-demo">
         <h3 class="demo-title">Реставрация аудио</h3>
         <p class="demo-subtitle">Ваш голос может звучать чисто при любых условиях</p>
 
         <div class="audio-player-container">
           <div class="track-buttons">
             <button class="track-btn active" data-track="fixed">
-                            <span class="track-label">После обработки</span>
+              <span class="track-label">После обработки</span>
             </button>
             <button class="track-btn" data-track="original">
-
               <span class="track-label">Оригинал</span>
             </button>
-
           </div>
 
           <div class="audio-player">
@@ -218,8 +205,8 @@
               </div>
             </div>
           </div>
-                  </div>
-                  <audio id="audioPlayer" preload="metadata">
+        </div>
+        <audio id="audioPlayer" preload="metadata">
           <source
             src="../My%20fix%20plus%20AI.mp3"
             type="audio/mpeg"
@@ -229,18 +216,8 @@
           <source src="../Just%20AI.mp3" type="audio/mpeg" data-track="ai" />
           Ваш браузер не поддерживает аудио.
         </audio>
-    </div>
-        <div class="card">
-          <h3>Реставрация аудио</h3>
-          <ul class="skills">
-            <li>Очистка исходных записей</li>
-            <li>Удаление шума</li>
-            <li>Баланс и эквализация</li>
-            <li>Коррекция громкости</li>
-            <li>Реставрация архивного материала</li>
-            </ul>
-        </div>
-
+      </div>
+      -->
     </main>
     <div class="cta-buttons">
       <a
@@ -258,7 +235,7 @@
         <i class="fa-brands fa-whatsapp"></i>
       </a>
     </div>
-<br><br><br>
+    <br /><br /><br />
     <footer>
       <div class="social-links">
         <a href="index.html"><i class="fa-solid fa-copyright"> </i>Tony's Media and Automation</a>
@@ -315,7 +292,7 @@
         });
       });
 
-      playPauseBtn.addEventListener("click", () => {
+      playPauseBtn?.addEventListener("click", () => {
         if (audioPlayer.paused) {
           audioPlayer.play();
           playPauseBtn.innerHTML = '<span class="play-icon">⏸️</span>';
@@ -325,21 +302,25 @@
         }
       });
 
-      audioPlayer.addEventListener("timeupdate", () => {
+      audioPlayer?.addEventListener("timeupdate", () => {
         const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-        progressFill.style.width = `${progress || 0}%`;
+        if (progressFill) {
+          progressFill.style.width = `${progress || 0}%`;
+        }
         trackTime.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
       });
 
-      audioPlayer.addEventListener("loadedmetadata", () => {
+      audioPlayer?.addEventListener("loadedmetadata", () => {
         trackTime.textContent = `0:00 / ${formatTime(audioPlayer.duration)}`;
       });
 
-      volumeSlider.addEventListener("input", () => {
+      volumeSlider?.addEventListener("input", () => {
         audioPlayer.volume = volumeSlider.value / 100;
       });
 
-      loadTrack("fixed", "После обработки");
+      if (audioPlayer) {
+        loadTrack("fixed", "После обработки");
+      }
     </script>
     <script>
       const ctaButtons = document.querySelectorAll(
@@ -354,5 +335,5 @@
       pulseButtons();
       setInterval(pulseButtons, 60000);
     </script>
-</body>
+  </body>
 </html>
