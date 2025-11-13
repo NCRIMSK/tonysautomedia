@@ -17,6 +17,7 @@
   --card-min-height: auto;
   --card-justify: flex-start;
   --card-padding: 0;
+  --iframe-inline-size: 80%;
 }
 
 :focus-visible { /* CHANGED from :focus */
@@ -49,7 +50,15 @@ body {
   align-items: stretch;
 }
 
-iframe,
+iframe {
+  display: block;
+  width: var(--iframe-inline-size, 100%);
+  max-width: var(--iframe-inline-size, 100%);
+  margin-inline: auto;
+  height: auto;
+  aspect-ratio: var(--embed-aspect, 16 / 9);
+}
+
 video {
   display: block;
   width: 100%;
@@ -99,8 +108,8 @@ body > * {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  margin-left: 5vw;  /* 1/6 экрана слева */
-  margin-right: 5vw; /* 1/6 экрана справа */
+  margin-left: 10vw;  /* увеличенный отступ слева */
+  margin-right: 10vw; /* увеличенный отступ справа */
 }
 
 .landing .page-content {
@@ -119,9 +128,9 @@ body > * {
 .form-embed {
   --embed-aspect: 100 / 65.1042;
   position: relative;
-  width: 100%;
+  width: var(--iframe-inline-size, 100%);
   aspect-ratio: var(--embed-aspect);
-  margin: 1.6em 0 0.9em;
+  margin: 1.6em auto 0.9em;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
@@ -300,17 +309,21 @@ body > * {
   gap: 1rem;
 }
 
-.card img,
-.card iframe,
-.offer-card iframe {
+.card img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: 0;
 }
 
-.card img {
-  border-radius: 0;
+.card iframe,
+.offer-card iframe {
+  width: var(--iframe-inline-size, 100%);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .card p,
@@ -371,7 +384,11 @@ body > * {
   .card,
   .card iframe {
     margin: 1%;
-    width: 98%;
+  }
+
+  .card iframe {
+    width: var(--iframe-inline-size, 100%);
+    margin-inline: auto;
   }
 }
 
@@ -885,8 +902,8 @@ footer {
   .page-content {
     padding-left: 1rem;
     padding-right: 1rem;
-	margin-left: 1vw;  /* 1/6 экрана слева */
-    margin-right: 1vw; /* 1/6 экрана справа */
+    margin-left: 2vw;  /* увеличенный отступ слева */
+    margin-right: 2vw; /* увеличенный отступ справа */
   }
 
   .social-links {
@@ -1131,7 +1148,9 @@ footer {
 
 .video-wrapper {
   position: relative;
+  width: var(--iframe-inline-size, 100%);
   padding-top: 56.25%;
+  margin-inline: auto;
 }
 
 .video-wrapper iframe {
