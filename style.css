@@ -954,6 +954,11 @@ html[dir="rtl"] li {
   .nav-dropdown.open .dropdown-content {
     display: flex;
   }
+
+  .dropdown-content a {
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
 /* Video fallback image */
