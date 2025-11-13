@@ -125,6 +125,20 @@ body > * {
   --card-padding: clamp(2.5rem, 6vw, 4rem);
 }
 
+.hero-title {
+  width: 100%;
+  align-self: flex-start;
+  padding: clamp(1.5rem, 5vh, 3rem) clamp(1.5rem, 4vw, 3rem) 0;
+  margin-top: clamp(0rem, 4vh, 1rem);
+  text-align: left;
+}
+
+.hero-title__heading {
+  font-size: clamp(6rem, 16vw, 10rem);
+  line-height: 0.95;
+  margin: 0;
+}
+
 .form-embed {
   --embed-aspect: 100 / 65.1042;
   position: relative;
@@ -135,6 +149,7 @@ body > * {
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
   will-change: transform;
+  min-height: 18.5rem;
 }
 
 .form-embed iframe {
@@ -146,6 +161,14 @@ body > * {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+@supports not (aspect-ratio: 1) {
+  .form-embed {
+    height: 0;
+    min-height: 0;
+    padding-top: 65.1042%;
+  }
 }
 
 .landing-hero {
