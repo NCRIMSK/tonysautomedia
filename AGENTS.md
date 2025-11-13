@@ -20,6 +20,11 @@
 - **JS**: Vanilla modules with `defer`. Names: camelCase for variables/functions, PascalCase for classes. Attach behavior via `data-*` hooks (e.g., `[data-nav-toggle]`) and use event delegation.
 - **Files**: kebab-case filenames (`hero-banner.html`, `site-header.css`). Use relative paths from the page.
 
+### Vertical video cards
+- Use the `.card card--vertical-video` pattern for every vertical video embed.
+- Nest the media inside `.vertical-video-card > .vertical-video-card__frame > .vertical-video-card__media-wrapper` and apply the `vertical-video-card__media` class to the `<video>` or `<iframe>` element so it inherits the 9:16 aspect ratio and max width (one third of the viewport on desktop, full width on narrow screens).
+- Keep supporting copy inside `.vertical-video-card__caption`. If no caption is required, leave the element empty but keep the structure for consistent spacing.
+
 ## Testing Guidelines
 - Validate HTML/CSS (W3C Validators). Check console for errors and 404s.
 - Responsive checks at 320, 768, 1024, 1440 px. Test keyboard navigation and focus states.
