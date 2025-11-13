@@ -88,8 +88,54 @@ body > * {
 
 .landing .page-content {
   margin: 0;
-  padding: 0;
+  padding: 0 clamp(1.5rem, 4vw, 3rem) clamp(6rem, 12vh, 8rem);
   align-items: center;
+  gap: clamp(2rem, 6vh, 4.5rem);
+}
+
+.landing .page-content > .card {
+  width: min(92vw, 60rem);
+  margin: 0 auto;
+  background: rgba(239, 236, 233, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.15);
+  padding: clamp(2.5rem, 6vw, 4rem);
+  gap: clamp(1.25rem, 3vh, 2rem);
+}
+
+.landing .page-content > .card:first-of-type {
+  min-height: clamp(24rem, 80vh, 36rem);
+  background: rgba(239, 236, 233, 0.16);
+  border: 1px solid rgba(239, 236, 233, 0.45);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2rem 4.5rem rgba(0, 0, 0, 0.2);
+  gap: clamp(2rem, 6vh, 3rem);
+}
+
+.landing .page-content > .card:first-of-type h1 {
+  font-size: clamp(2.75rem, 9vw, 5.5rem);
+  letter-spacing: 0.08em;
+}
+
+.landing .form-embed {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 65.1042%;
+  margin: 1.6em 0 0.9em;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+  will-change: transform;
+}
+
+.landing .form-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .landing-hero {
@@ -388,6 +434,10 @@ h6 {
   white-space: nowrap; 
   flex-shrink: 0;
   gap: 1rem;
+}
+
+.landing .main-nav {
+  align-self: stretch;
 }
 
 .bg-audio::before{
