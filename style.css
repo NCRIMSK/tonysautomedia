@@ -182,6 +182,17 @@ body > * {
   --card-padding: clamp(2.5rem, 6vw, 4rem);
 }
 
+.hero-card {
+  --card-padding: clamp(3rem, 18vw, 8rem) clamp(1.5rem, 6vw, 4rem);
+  gap: clamp(1rem, 3vh, 2rem);
+  text-align: center;
+}
+
+.hero-card h1 {
+  font-size: clamp(2.75rem, 12vw, 6.5rem);
+  letter-spacing: 0.08em;
+}
+
 .hero-title {
   width: 100%;
   align-self: flex-start;
@@ -447,6 +458,12 @@ body > * {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+  .hero-card {
+    --card-padding: clamp(2rem, 12vw, 5rem) clamp(1rem, 5vw, 2.5rem);
+  }
+  .hero-card h1 {
+    font-size: clamp(2.25rem, 10vw, 4rem);
   }
   h1,
   h2,
