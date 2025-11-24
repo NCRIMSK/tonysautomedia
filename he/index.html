@@ -93,17 +93,93 @@
       <section class="card" id="contact-form">
         <h2>כבר יודעים למה הגעתם? מלאו את הטופס:</h2>
         <div class="form-embed">
-          <iframe
-            loading="lazy"
-            src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen"
-          ></iframe>
+          <div class="contact-form-card">
+            <h3 class="contact-form-title">צרו קשר</h3>
+            <p class="contact-form-subtitle">השאירו פרטים ואחזור אליכם בהקדם.</p>
+            <form class="contact-form" data-contact-form>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-name-he">
+                  שם מלא <span class="contact-form__required">*</span>
+                </label>
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="contact-name-he"
+                  name="name"
+                  placeholder="יוחנן כהן"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-email-he">
+                  אימייל <span class="contact-form__required">*</span>
+                </label>
+                <input
+                  class="contact-form__input"
+                  type="email"
+                  id="contact-email-he"
+                  name="email"
+                  placeholder="name@example.com"
+                  pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-budget-he">
+                  תקציב משוער <span class="contact-form__required">*</span>
+                </label>
+                <select class="contact-form__select" id="contact-budget-he" name="budget" required>
+                  <option value="" disabled selected>בחרו טווח תקציב</option>
+                  <option value="< $1,000">פחות מ-1,000$</option>
+                  <option value="$1,000 - $5,000">1,000$ - 5,000$</option>
+                  <option value="$5,000 - $10,000">5,000$ - 10,000$</option>
+                  <option value="> $10,000">יותר מ-10,000$</option>
+                </select>
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-description-he">
+                  תיאור הפרויקט (עד 300 תווים)
+                </label>
+                <textarea
+                  class="contact-form__textarea"
+                  id="contact-description-he"
+                  name="description"
+                  maxlength="300"
+                  rows="4"
+                  placeholder="ספרו בקצרה על הצורך שלכם..."
+                ></textarea>
+                <div class="contact-form__helper"><span data-char-count>0</span>/300</div>
+              </div>
+
+              <input
+                type="text"
+                name="_honey"
+                class="contact-form__honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
+              <p class="contact-form__privacy">
+                בלחיצה על "שלח בקשה" אתם מסכימים ל
+                <a href="../privacy_he.html">מדיניות הפרטיות</a> שלנו.
+              </p>
+
+              <button
+                type="submit"
+                class="contact-form__submit"
+                data-submit
+                data-loading-text="שולח..."
+              >
+                שלח בקשה
+              </button>
+              <div class="form-message is-hidden" data-response aria-live="polite"></div>
+            </form>
+          </div>
         </div>
-        <p class="form-consent">
-          בשליחת הטופס אתם מסכימים לעיבוד הנתונים האישיים בהתאם ל־
-          <a href="privacy.html">מדיניות הפרטיות</a>.
-        </p>
       </section>
     </main>
     <div class="cta-buttons">
@@ -126,6 +202,7 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
+    <script src="../contact-form.js"></script>
     <script src="../nav.js"></script>
     <script>
       const ctaButtons = document.querySelectorAll(

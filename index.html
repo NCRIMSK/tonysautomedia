@@ -90,17 +90,93 @@
       <section class="card" id="contact-form">
         <h2>If you already know why you're here, fill the form below:</h2>
         <div class="form-embed">
-          <iframe
-            loading="lazy"
-            src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen"
-          ></iframe>
+          <div class="contact-form-card">
+            <h3 class="contact-form-title">Contact Us</h3>
+            <p class="contact-form-subtitle">Share a few details and I'll get back to you shortly.</p>
+            <form class="contact-form" data-contact-form>
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-name-en">
+                  Full Name <span class="contact-form__required">*</span>
+                </label>
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="contact-name-en"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-email-en">
+                  Email Address <span class="contact-form__required">*</span>
+                </label>
+                <input
+                  class="contact-form__input"
+                  type="email"
+                  id="contact-email-en"
+                  name="email"
+                  placeholder="john@example.com"
+                  pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-budget-en">
+                  Estimated Budget <span class="contact-form__required">*</span>
+                </label>
+                <select class="contact-form__select" id="contact-budget-en" name="budget" required>
+                  <option value="" disabled selected>Select a budget range</option>
+                  <option value="< $1,000">Less than $1,000</option>
+                  <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                  <option value="> $10,000">More than $10,000</option>
+                </select>
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-description-en">
+                  Project Description (Max 300 chars)
+                </label>
+                <textarea
+                  class="contact-form__textarea"
+                  id="contact-description-en"
+                  name="description"
+                  maxlength="300"
+                  rows="4"
+                  placeholder="Briefly describe your project needs..."
+                ></textarea>
+                <div class="contact-form__helper"><span data-char-count>0</span>/300</div>
+              </div>
+
+              <input
+                type="text"
+                name="_honey"
+                class="contact-form__honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
+              <p class="contact-form__privacy">
+                By clicking "Send Request", you agree to our
+                <a href="privacy.html">Privacy Policy</a>.
+              </p>
+
+              <button
+                type="submit"
+                class="contact-form__submit"
+                data-submit
+                data-loading-text="Sending..."
+              >
+                Send Request
+              </button>
+              <div class="form-message is-hidden" data-response aria-live="polite"></div>
+            </form>
+          </div>
         </div>
-        <p class="form-consent">
-          By submitting this form, you consent to the processing of your personal data in accordance with our
-          <a href="privacy.html">Privacy Policy</a>.
-        </p>
       </section>
     </main>
 
@@ -125,6 +201,7 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
+    <script src="contact-form.js"></script>
     <script src="nav.js"></script>
     <script>
       const ctaButtons = document.querySelectorAll(

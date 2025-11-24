@@ -71,7 +71,7 @@
               <iframe
                 class="vertical-video-card__media"
                 style="--embed-aspect: 4 / 5;"
-                src="https://www.youtube.com/embed/ZwcN7h86Myk?controls=0"
+                src="https://www.youtube.com/embed/ZwcN7h86Myk?controls=1&amp;rel=0"
                 title="AI Video Production Demo"
                 frameborder="0"
                 allow="encrypted-media; web-share"
@@ -119,16 +119,93 @@
           <p>מלאו את טופס יצירת הקשר:</p>
           <br />
           <div class="form-embed">
-            <iframe
-              loading="lazy"
-              src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
-              allowfullscreen
-            ></iframe>
+            <div class="contact-form-card">
+              <h3 class="contact-form-title">צרו קשר</h3>
+              <p class="contact-form-subtitle">השאירו פרטים ואחזור אליכם בהקדם.</p>
+              <form class="contact-form" data-contact-form>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-name-he-ai">
+                    שם מלא <span class="contact-form__required">*</span>
+                  </label>
+                  <input
+                    class="contact-form__input"
+                    type="text"
+                    id="contact-name-he-ai"
+                    name="name"
+                    placeholder="יוחנן כהן"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-email-he-ai">
+                    אימייל <span class="contact-form__required">*</span>
+                  </label>
+                  <input
+                    class="contact-form__input"
+                    type="email"
+                    id="contact-email-he-ai"
+                    name="email"
+                    placeholder="name@example.com"
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-budget-he-ai">
+                    תקציב משוער <span class="contact-form__required">*</span>
+                  </label>
+                  <select class="contact-form__select" id="contact-budget-he-ai" name="budget" required>
+                    <option value="" disabled selected>בחרו טווח תקציב</option>
+                    <option value="< $1,000">פחות מ-1,000$</option>
+                    <option value="$1,000 - $5,000">1,000$ - 5,000$</option>
+                    <option value="$5,000 - $10,000">5,000$ - 10,000$</option>
+                    <option value="> $10,000">יותר מ-10,000$</option>
+                  </select>
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-description-he-ai">
+                    תיאור הפרויקט (עד 300 תווים)
+                  </label>
+                  <textarea
+                    class="contact-form__textarea"
+                    id="contact-description-he-ai"
+                    name="description"
+                    maxlength="300"
+                    rows="4"
+                    placeholder="ספרו בקצרה על הצורך שלכם..."
+                  ></textarea>
+                  <div class="contact-form__helper"><span data-char-count>0</span>/300</div>
+                </div>
+
+                <input
+                  type="text"
+                  name="_honey"
+                  class="contact-form__honey"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+
+                <p class="contact-form__privacy">
+                  בלחיצה על "שלח בקשה" אתם מסכימים ל
+                  <a href="../privacy_he.html">מדיניות הפרטיות</a> שלנו.
+                </p>
+
+                <button
+                  type="submit"
+                  class="contact-form__submit"
+                  data-submit
+                  data-loading-text="שולח..."
+                >
+                  שלח בקשה
+                </button>
+                <div class="form-message is-hidden" data-response aria-live="polite"></div>
+              </form>
+            </div>
           </div>
-          <p class="form-consent">
-            בשליחת הטופס אתם מסכימים לעיבוד הנתונים האישיים בהתאם ל־
-            <a href="privacy.html">מדיניות הפרטיות</a>.
-          </p>
         </div>
       </div>
     </main>
@@ -163,6 +240,7 @@
         <a href="https://www.tiktok.com/@tony.neuro"><i class="fa-brands fa-tiktok"></i> TikTok</a>
       </div>
     </footer>
+    <script src="../contact-form.js"></script>
     <script src="../nav.js"></script>
     <script>
       const ctaButtons = document.querySelectorAll('.cta-buttons .retro-button');

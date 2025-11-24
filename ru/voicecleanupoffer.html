@@ -156,13 +156,93 @@
               по созданию безупречных голосовых дорожек.
             </p>
             <div class="form-embed">
-              <iframe
-                loading="lazy"
-                src="https://www.canva.com/design/DAG4e2ktXb0/0R9vHlxiuQ_4rxs2_IQvHw/view?embed"
-                allowfullscreen
-              ></iframe>
+              <div class="contact-form-card">
+                <h3 class="contact-form-title">Свяжитесь со мной</h3>
+                <p class="contact-form-subtitle">Оставьте контакты, и я отвечу в ближайшее время.</p>
+                <form class="contact-form" data-contact-form>
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-name-ru-voice">
+                      Полное имя <span class="contact-form__required">*</span>
+                    </label>
+                    <input
+                      class="contact-form__input"
+                      type="text"
+                      id="contact-name-ru-voice"
+                      name="name"
+                      placeholder="Иван Иванов"
+                      required
+                    />
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-email-ru-voice">
+                      Email <span class="contact-form__required">*</span>
+                    </label>
+                    <input
+                      class="contact-form__input"
+                      type="email"
+                      id="contact-email-ru-voice"
+                      name="email"
+                      placeholder="ivan@example.com"
+                      pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                      required
+                    />
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-budget-ru-voice">
+                      Бюджет <span class="contact-form__required">*</span>
+                    </label>
+                    <select class="contact-form__select" id="contact-budget-ru-voice" name="budget" required>
+                      <option value="" disabled selected>Выберите диапазон</option>
+                      <option value="< $1,000">Менее $1,000</option>
+                      <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                      <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                      <option value="> $10,000">Более $10,000</option>
+                    </select>
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-description-ru-voice">
+                      Описание проекта (до 300 символов)
+                    </label>
+                    <textarea
+                      class="contact-form__textarea"
+                      id="contact-description-ru-voice"
+                      name="description"
+                      maxlength="300"
+                      rows="4"
+                      placeholder="Коротко опишите задачу..."
+                    ></textarea>
+                    <div class="contact-form__helper"><span data-char-count>0</span>/300</div>
+                  </div>
+
+                  <input
+                    type="text"
+                    name="_honey"
+                    class="contact-form__honey"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                  />
+
+                  <p class="contact-form__privacy">
+                    Нажимая «Отправить заявку», вы соглашаетесь с нашей
+                    <a href="../privacy.html">Политикой конфиденциальности</a>.
+                  </p>
+
+                  <button
+                    type="submit"
+                    class="contact-form__submit"
+                    data-submit
+                    data-loading-text="Отправка..."
+                  >
+                    Отправить заявку
+                  </button>
+                  <div class="form-message is-hidden" data-response aria-live="polite"></div>
+                </form>
+              </div>
             </div>
-            <p class="form-consent">Отправляя эту форму, вы даёте согласие на обработку ваших персональных данных в соответствии с нашей <a href="privacy.html">Политикой конфиденциальности</a>.</p>
           </div>
         </div>
       </section>
@@ -198,6 +278,7 @@
       </div>
     </footer>
 
+    <script src="../contact-form.js"></script>
     <script src="../nav.js"></script>
     <script>
       const voiceCleanupPlayer = document.getElementById("voiceCleanupPlayer");
