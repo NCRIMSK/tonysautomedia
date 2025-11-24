@@ -93,7 +93,7 @@
           <div class="contact-form-card">
             <h3 class="contact-form-title">Contact Us</h3>
             <p class="contact-form-subtitle">Share a few details and I'll get back to you shortly.</p>
-            <form class="contact-form" data-contact-form>
+            <form class="contact-form" data-contact-form data-thank-you="thank-you.html">
               <div class="contact-form__field">
                 <label class="contact-form__label" for="contact-name-en">
                   Full Name <span class="contact-form__required">*</span>
@@ -127,13 +127,14 @@
                 <label class="contact-form__label" for="contact-budget-en">
                   Estimated Budget <span class="contact-form__required">*</span>
                 </label>
-                <select class="contact-form__select" id="contact-budget-en" name="budget" required>
-                  <option value="" disabled selected>Select a budget range</option>
-                  <option value="< $1,000">Less than $1,000</option>
-                  <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                  <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                  <option value="> $10,000">More than $10,000</option>
-                </select>
+                <input
+                  class="contact-form__input"
+                  type="number"
+                  id="contact-budget-en"
+                  name="budget"
+                  placeholder="Enter your budget"
+                  required
+                />
               </div>
 
               <div class="contact-form__field">

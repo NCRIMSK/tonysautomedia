@@ -150,6 +150,20 @@
           </div>
 
           <div class="offer-card form-card">
+            <h2 class="section-title">Стоимость</h2>
+            <h3>50$ за 10 минут исходника</h3>
+            <p class="price-note">*Цена примерная, финальная стоимость будет после оффера.</p>
+            <br />
+            Хотите убрать оговорки, треск, гудки машин или даже вырезать часть текста?
+            <strong>Что можно убрать?</strong>
+            <ul class="pricing-features">
+              <br />
+              <li>Неверные дубли, оговорки, слова-паразиты</li>
+              <li>Фоновый шум, гудки машин и ветер</li>
+              <li>Реверберацию, искажения, глюки</li>
+              <li>Другие сложные для очистки шумы</li>
+            </ul>
+            <br />
             <h2 class="section-title">Начните очистку</h2>
             <p>
               Расскажите о проекте, и я свяжусь с вами с индивидуальным планом
@@ -159,7 +173,7 @@
               <div class="contact-form-card">
                 <h3 class="contact-form-title">Свяжитесь со мной</h3>
                 <p class="contact-form-subtitle">Оставьте контакты, и я отвечу в ближайшее время.</p>
-                <form class="contact-form" data-contact-form>
+                <form class="contact-form" data-contact-form data-thank-you="ru/thank-you.html">
                   <div class="contact-form__field">
                     <label class="contact-form__label" for="contact-name-ru-voice">
                       Полное имя <span class="contact-form__required">*</span>
@@ -189,18 +203,19 @@
                     />
                   </div>
 
-                  <div class="contact-form__field">
-                    <label class="contact-form__label" for="contact-budget-ru-voice">
-                      Бюджет <span class="contact-form__required">*</span>
-                    </label>
-                    <select class="contact-form__select" id="contact-budget-ru-voice" name="budget" required>
-                      <option value="" disabled selected>Выберите диапазон</option>
-                      <option value="< $1,000">Менее $1,000</option>
-                      <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                      <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                      <option value="> $10,000">Более $10,000</option>
-                    </select>
-                  </div>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-budget-ru-voice">
+                    Бюджет <span class="contact-form__required">*</span>
+                  </label>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-ru-voice"
+                    name="budget"
+                    placeholder="Введите ваш бюджет"
+                    required
+                  />
+                </div>
 
                   <div class="contact-form__field">
                     <label class="contact-form__label" for="contact-description-ru-voice">

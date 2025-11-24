@@ -96,10 +96,10 @@
       <div class="offer-card" id="contact-form">
         <h2 class="section-title">Стоимость</h2>
         <h3>
-          от <span class="price-old">700&nbsp;$</span>
-          <span class="price-new">500$*</span> за видео до 30 секунд
+          <span class="price-old">700&nbsp;$</span>
+          <span class="price-new">500$*</span> за 30-секундное видео
         </h3>
-        <p class="price-note">*Итоговая стоимость зависит от брифа.</p>
+        <p class="price-note">*Цена примерная, финальная стоимость будет после оффера.</p>
         AI — это целое поле возможностей.<br />Можно сделать реалистичную съёмку<br />или придумать что-то в совершенно другом стиле.
         <br /><br />
         <div class="pricing-card">
@@ -122,7 +122,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">Свяжитесь со мной</h3>
               <p class="contact-form-subtitle">Оставьте контакты, и я отвечу в ближайшее время.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="ru/thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-ru-ai">
                     Полное имя <span class="contact-form__required">*</span>
@@ -156,13 +156,14 @@
                   <label class="contact-form__label" for="contact-budget-ru-ai">
                     Бюджет <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-ru-ai" name="budget" required>
-                    <option value="" disabled selected>Выберите диапазон</option>
-                    <option value="< $1,000">Менее $1,000</option>
-                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                    <option value="> $10,000">Более $10,000</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-ru-ai"
+                    name="budget"
+                    placeholder="Введите ваш бюджет"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">

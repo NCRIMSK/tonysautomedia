@@ -96,10 +96,10 @@
       <div class="offer-card" id="contact-form">
         <h2 class="section-title">מחיר</h2>
         <h3>
-          החל מ־<span class="price-old">700$</span>
-          <span class="price-new">500$*</span> עבור עד 30 שניות וידאו
+          <span class="price-old">700$</span>
+          <span class="price-new">500$*</span> עבור וידאו של 30 שניות
         </h3>
-        <p class="price-note">*המחיר עשוי להשתנות בהתאם לבריף.</p>
+        <p class="price-note">*המחיר משוער, העלות הסופית תאושר לאחר ההצעה.</p>
         AI הוא עולם של אפשרויות.<br />אפשר ליצור צילום ריאליסטי<br />או משהו אחר לגמרי.
         <br /><br />
         <div class="pricing-card">
@@ -122,7 +122,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">צרו קשר</h3>
               <p class="contact-form-subtitle">השאירו פרטים ואחזור אליכם בהקדם.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="he/thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-he-ai">
                     שם מלא <span class="contact-form__required">*</span>
@@ -156,13 +156,14 @@
                   <label class="contact-form__label" for="contact-budget-he-ai">
                     תקציב משוער <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-he-ai" name="budget" required>
-                    <option value="" disabled selected>בחרו טווח תקציב</option>
-                    <option value="< $1,000">פחות מ-1,000$</option>
-                    <option value="$1,000 - $5,000">1,000$ - 5,000$</option>
-                    <option value="$5,000 - $10,000">5,000$ - 10,000$</option>
-                    <option value="> $10,000">יותר מ-10,000$</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-he-ai"
+                    name="budget"
+                    placeholder="הזינו תקציב"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">
