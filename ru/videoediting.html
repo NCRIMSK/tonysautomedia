@@ -85,8 +85,8 @@
 
       <div class="offer-card" id="contact-form">
         <h2 class="section-title">Цена</h2>
-        <h3>300$ (STANDARD • Cinematic Story)</h3>
-        <p class="price-note">*Pricing may vary and depends on the brief.</p>
+        <h3>300$ за 2-минутное видео</h3>
+        <p class="price-note">*Цена примерная, финальная стоимость будет после оффера.</p>
         * 4 дня, 3 правки, до 45 мин исходников → ~2 мин ролик
         <br /><br />
         Я Тони. Монтирую по ритму, эмоциям и flow — не просто «по времени». Уровень вещания: темп, цвет, звук и история работают вместе. Ваш материал становится кинематографичным, цельным и живым.
@@ -118,7 +118,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">Свяжитесь со мной</h3>
               <p class="contact-form-subtitle">Оставьте контакты, и я отвечу в ближайшее время.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="ru/thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-ru-video">
                     Полное имя <span class="contact-form__required">*</span>
@@ -152,13 +152,14 @@
                   <label class="contact-form__label" for="contact-budget-ru-video">
                     Бюджет <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-ru-video" name="budget" required>
-                    <option value="" disabled selected>Выберите диапазон</option>
-                    <option value="< $1,000">Менее $1,000</option>
-                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                    <option value="> $10,000">Более $10,000</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-ru-video"
+                    name="budget"
+                    placeholder="Введите ваш бюджет"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">

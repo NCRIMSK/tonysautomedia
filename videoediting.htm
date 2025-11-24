@@ -114,8 +114,8 @@
 
       <div class="offer-card" id="contact-form">
         <h2 class="section-title">Price</h2>
-        <h3>from 300$* up to 30 seconds video</h3>
-        <p class="price-note">*Pricing may vary and depends on the brief.</p>
+        <h3>300$ for a 2-minute video</h3>
+        <p class="price-note">*Price is approximate; final cost will be confirmed after the offer.</p>
         Fast delivery, 3 revisions, up to 45 min footage → ~2 min edit
         <br /><br />
         I'm Tony. I cut for rhythm, emotion, and flow — not just for time.
@@ -150,7 +150,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">Contact Us</h3>
               <p class="contact-form-subtitle">Share a few details and I'll get back to you shortly.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-video">
                     Full Name <span class="contact-form__required">*</span>
@@ -184,13 +184,14 @@
                   <label class="contact-form__label" for="contact-budget-video">
                     Estimated Budget <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-video" name="budget" required>
-                    <option value="" disabled selected>Select a budget range</option>
-                    <option value="< $1,000">Less than $1,000</option>
-                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                    <option value="> $10,000">More than $10,000</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-video"
+                    name="budget"
+                    placeholder="Enter your budget"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">

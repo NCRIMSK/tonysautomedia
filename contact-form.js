@@ -1,4 +1,4 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwvcAwHg6P6Oz9DnUQYbWguzSn5sQYHcV4uFXP3SMUZ5SCJgmRyKszcK01sZ_WqUAD/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2PV-4h0GsNFlrY7-wVaMl0rWb3gt8sHgtMjIDgHfDYRTuI7EI4sy8vfHKr5IDgMfU/exec';
 
 const contactForms = document.querySelectorAll('[data-contact-form]');
 
@@ -8,6 +8,13 @@ contactForms.forEach((form) => {
   const descInput = form.querySelector('textarea[name="description"]');
   const charCount = form.querySelector('[data-char-count]');
   const defaultSubmitText = submitBtn?.textContent?.trim() || 'Send';
+  const thankYouUrl =
+    form.dataset.thankYou ||
+    (document.documentElement.lang === 'ru'
+      ? 'ru/thank-you.html'
+      : document.documentElement.lang === 'he'
+        ? 'he/thank-you.html'
+        : 'thank-you.html');
 
   if (descInput && charCount) {
     const updateCharCount = () => {
@@ -54,10 +61,7 @@ contactForms.forEach((form) => {
         if (result.status === 'success') {
           responseMsg.classList.add('form-message--success');
           responseMsg.textContent = result.message || 'Request sent successfully.';
-          form.reset();
-          if (charCount) {
-            charCount.textContent = '0';
-          }
+          window.location.href = thankYouUrl;
         } else {
           responseMsg.classList.add('form-message--error');
           responseMsg.textContent = result.message || 'Error processing data. Please try again.';

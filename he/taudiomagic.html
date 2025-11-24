@@ -123,7 +123,7 @@
       <div class="offer-card" id="contact-form">
         <h2 class="section-title">תמחור</h2>
         <h3>מ־200$* עבור 15 דקות חומר גלם</h3>
-        <p class="price-note">*מחיר סופי תלוי בבריף.</p>
+        <p class="price-note">*המחיר משוער, העלות הסופית תאושר לאחר ההצעה.</p>
         <br />
         אני טוני. הניסיון שלי (מעל 20 שנה, מאומת ב־IMDb) הופך סאונד יומיומי ליצירה ברמת שידור.
         <br /><br />
@@ -150,7 +150,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">צרו קשר</h3>
               <p class="contact-form-subtitle">השאירו פרטים ואחזור אליכם בהקדם.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="he/thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-he-audio">
                     שם מלא <span class="contact-form__required">*</span>
@@ -184,13 +184,14 @@
                   <label class="contact-form__label" for="contact-budget-he-audio">
                     תקציב משוער <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-he-audio" name="budget" required>
-                    <option value="" disabled selected>בחרו טווח תקציב</option>
-                    <option value="< $1,000">פחות מ-1,000$</option>
-                    <option value="$1,000 - $5,000">1,000$ - 5,000$</option>
-                    <option value="$1,000 - $10,000">5,000$ - 10,000$</option>
-                    <option value="> $10,000">יותר מ-10,000$</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-he-audio"
+                    name="budget"
+                    placeholder="הזינו תקציב"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">

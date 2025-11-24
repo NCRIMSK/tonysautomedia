@@ -124,7 +124,7 @@
       <div class="offer-card">
         <h2 class="section-title">Price</h2>
 		<h3>from 200$* for 15 minutes of raw material</h3>
-		<p class="price-note">*Pricing may vary and depends on the brief.</p><br>
+            <p class="price-note">*Price is approximate; final cost will be confirmed after the offer.</p><br>
 		I'm Tony and with my 20+ years IMDb verified experience<br>I turn ordinary audio into broadcast grade art piece.<br><br>
 		You'll get sounds and video synced audio tracks<br>all balanced, ready to engage your audience<br>mastered to EBU standards - Yes you'll be able to air your video on TV
         <div class="pricing-card">
@@ -149,7 +149,7 @@
             <div class="contact-form-card">
               <h3 class="contact-form-title">Contact Us</h3>
               <p class="contact-form-subtitle">Share a few details and I'll get back to you shortly.</p>
-              <form class="contact-form" data-contact-form>
+              <form class="contact-form" data-contact-form data-thank-you="thank-you.html">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="contact-name-audio">
                     Full Name <span class="contact-form__required">*</span>
@@ -183,13 +183,14 @@
                   <label class="contact-form__label" for="contact-budget-audio">
                     Estimated Budget <span class="contact-form__required">*</span>
                   </label>
-                  <select class="contact-form__select" id="contact-budget-audio" name="budget" required>
-                    <option value="" disabled selected>Select a budget range</option>
-                    <option value="< $1,000">Less than $1,000</option>
-                    <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                    <option value="> $10,000">More than $10,000</option>
-                  </select>
+                  <input
+                    class="contact-form__input"
+                    type="number"
+                    id="contact-budget-audio"
+                    name="budget"
+                    placeholder="Enter your budget"
+                    required
+                  />
                 </div>
 
                 <div class="contact-form__field">
