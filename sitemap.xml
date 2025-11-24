@@ -4,7 +4,7 @@
   <!-- Root -->
   <url>
     <loc>https://www.tonysautomedia.com/</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,105 +12,117 @@
   <!-- EN pages -->
   <url>
     <loc>https://www.tonysautomedia.com/index.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/portfolio.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/aboutme.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/taudiomagic.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/voicecleanupoffer.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/videoediting.htm</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/aivideoprod.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/privacy.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/privacy_en.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/privacy_he.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.tonysautomedia.com/thank-you.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- HE pages -->
   <url>
     <loc>https://www.tonysautomedia.com/he/index.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/portfolio.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/aboutme.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/taudiomagic.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/voicecleanupoffer.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/videoediting.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/he/privacy.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.tonysautomedia.com/he/thank-you.html</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -118,43 +130,49 @@
   <!-- RU pages -->
   <url>
     <loc>https://www.tonysautomedia.com/ru/index.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/portfolio.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/aboutme.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/taudiomagic.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/voicecleanupoffer.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/videoediting.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.tonysautomedia.com/ru/privacy.html</loc>
-    <lastmod>2025-11-13</lastmod>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.tonysautomedia.com/ru/thank-you.html</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
