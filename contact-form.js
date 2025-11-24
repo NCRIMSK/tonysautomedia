@@ -11,10 +11,10 @@ contactForms.forEach((form) => {
   const thankYouUrl =
     form.dataset.thankYou ||
     (document.documentElement.lang === 'ru'
-      ? 'ru/thank-you.html'
+      ? '/ru/thank-you.html'
       : document.documentElement.lang === 'he'
-        ? 'he/thank-you.html'
-        : 'thank-you.html');
+        ? '/he/thank-you.html'
+        : '/thank-you.html');
 
   if (descInput && charCount) {
     const updateCharCount = () => {
